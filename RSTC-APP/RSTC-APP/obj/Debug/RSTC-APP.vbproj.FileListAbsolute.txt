@@ -1,0 +1,25 @@
+E:\VB.NET\RSTC-APP\RSTC-APP\bin\Debug\RSTC-APP.exe.config
+E:\VB.NET\RSTC-APP\RSTC-APP\bin\Debug\RSTC-APP.exe
+E:\VB.NET\RSTC-APP\RSTC-APP\bin\Debug\RSTC-APP.pdb
+E:\VB.NET\RSTC-APP\RSTC-APP\bin\Debug\RSTC-APP.xml
+E:\VB.NET\RSTC-APP\RSTC-APP\obj\Debug\RSTC-APP.vbproj.AssemblyReference.cache
+E:\VB.NET\RSTC-APP\RSTC-APP\obj\Debug\RSTC_APP.Form1.resources
+E:\VB.NET\RSTC-APP\RSTC-APP\obj\Debug\RSTC_APP.Resources.resources
+E:\VB.NET\RSTC-APP\RSTC-APP\obj\Debug\RSTC-APP.vbproj.GenerateResource.cache
+E:\VB.NET\RSTC-APP\RSTC-APP\obj\Debug\RSTC-APP.vbproj.CoreCompileInputs.cache
+E:\VB.NET\RSTC-APP\RSTC-APP\obj\Debug\RSTC-APP.exe
+E:\VB.NET\RSTC-APP\RSTC-APP\obj\Debug\RSTC-APP.xml
+E:\VB.NET\RSTC-APP\RSTC-APP\obj\Debug\RSTC-APP.pdb
+E:\Git Collab\RSTC-APP\RSTC-APP\bin\Debug\RSTC-APP.exe.config
+E:\Git Collab\RSTC-APP\RSTC-APP\bin\Debug\RSTC-APP.exe
+E:\Git Collab\RSTC-APP\RSTC-APP\bin\Debug\RSTC-APP.pdb
+E:\Git Collab\RSTC-APP\RSTC-APP\bin\Debug\RSTC-APP.xml
+E:\Git Collab\RSTC-APP\RSTC-APP\obj\Debug\RSTC-APP.vbproj.AssemblyReference.cache
+E:\Git Collab\RSTC-APP\RSTC-APP\obj\Debug\RSTC_APP.designlibrary.resources
+E:\Git Collab\RSTC-APP\RSTC-APP\obj\Debug\RSTC_APP.Form1.resources
+E:\Git Collab\RSTC-APP\RSTC-APP\obj\Debug\RSTC_APP.Resources.resources
+E:\Git Collab\RSTC-APP\RSTC-APP\obj\Debug\RSTC-APP.vbproj.GenerateResource.cache
+E:\Git Collab\RSTC-APP\RSTC-APP\obj\Debug\RSTC-APP.vbproj.CoreCompileInputs.cache
+E:\Git Collab\RSTC-APP\RSTC-APP\obj\Debug\RSTC-APP.exe
+E:\Git Collab\RSTC-APP\RSTC-APP\obj\Debug\RSTC-APP.xml
+E:\Git Collab\RSTC-APP\RSTC-APP\obj\Debug\RSTC-APP.pdb

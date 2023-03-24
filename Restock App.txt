@@ -1,0 +1,41 @@
+RSTC App
+
+features
+
++ Main Form (Dashboard)
+#Stock Availablity
+//List Products with each name
+#Design Library
+//List Product with images
+#Orders
+- Reorder Warning
+- Order History
+- Manage Order
+ 
+Forms
++ Stock Availabiity form
+-> Add products to database
+
+ - Update Stock
+-> Form for accepting values to the database
+-> Listing all the products in a Table
+-> Fetch data from Database
+
++ Design Library
+-> List images with product_name
+
++ Order History
+
+
+- Reorder functionality
+-> automatic reorder popup message
+
+
+
+
+
+
+
+
+DATABASE
+
