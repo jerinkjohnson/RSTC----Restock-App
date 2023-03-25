@@ -73,17 +73,29 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="add-product.Designer.vb">
+      <DependentUpon>add-product.vb</DependentUpon>
+    </Compile>
+    <Compile Include="add-product.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="designlibrary.Designer.vb">
       <DependentUpon>designlibrary.vb</DependentUpon>
     </Compile>
     <Compile Include="designlibrary.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="Hoodie-stock.Designer.vb">
+      <DependentUpon>Hoodie-stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hoodie-stock.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -101,19 +113,60 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="rstcDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rstcDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sweat-stock.Designer.vb">
+      <DependentUpon>sweat-stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="sweat-stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test1DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Totebag-stock.Designer.vb">
+      <DependentUpon>Totebag-stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Totebag-stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tshirt-stock.Designer.vb">
+      <DependentUpon>Tshirt-stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tshirt-stock.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="add-product.resx">
+      <DependentUpon>add-product.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="designlibrary.resx">
       <DependentUpon>designlibrary.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Hoodie-stock.resx">
+      <DependentUpon>Hoodie-stock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sweat-stock.resx">
+      <DependentUpon>sweat-stock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Totebag-stock.resx">
+      <DependentUpon>Totebag-stock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tshirt-stock.resx">
+      <DependentUpon>Tshirt-stock.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -127,12 +180,37 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="rstcDataSet.xsc">
+      <DependentUpon>rstcDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="rstcDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rstcDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rstcDataSet.xss">
+      <DependentUpon>rstcDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="test1DataSet.xsc">
+      <DependentUpon>test1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="test1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>test1DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="test1DataSet.xss">
+      <DependentUpon>test1DataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Screenshot_20230202_100942.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\brush stroke ong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Isolated_blue_t-shirt.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

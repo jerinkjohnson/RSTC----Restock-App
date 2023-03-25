@@ -38,48 +38,58 @@ Partial Class designlibrary
         '
         'PictureBox6
         '
-        Me.PictureBox6.Location = New System.Drawing.Point(68, 239)
+        Me.PictureBox6.Image = Global.RSTC_APP.My.Resources.Resources.Isolated_blue_t_shirt
+        Me.PictureBox6.Location = New System.Drawing.Point(95, 266)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(202, 140)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox6.TabIndex = 0
         Me.PictureBox6.TabStop = False
         '
         'PictureBox5
         '
-        Me.PictureBox5.Location = New System.Drawing.Point(292, 239)
+        Me.PictureBox5.Image = Global.RSTC_APP.My.Resources.Resources.brush_stroke_ong
+        Me.PictureBox5.Location = New System.Drawing.Point(319, 266)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(202, 140)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox5.TabIndex = 0
         Me.PictureBox5.TabStop = False
         '
         'PictureBox4
         '
-        Me.PictureBox4.Location = New System.Drawing.Point(515, 239)
+        Me.PictureBox4.Image = Global.RSTC_APP.My.Resources.Resources.Isolated_blue_t_shirt
+        Me.PictureBox4.Location = New System.Drawing.Point(542, 266)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(202, 140)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox4.TabIndex = 0
         Me.PictureBox4.TabStop = False
         '
         'PictureBox3
         '
-        Me.PictureBox3.Location = New System.Drawing.Point(515, 62)
+        Me.PictureBox3.Image = Global.RSTC_APP.My.Resources.Resources.brush_stroke_ong
+        Me.PictureBox3.Location = New System.Drawing.Point(542, 89)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(202, 140)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 0
         Me.PictureBox3.TabStop = False
         '
         'PictureBox2
         '
-        Me.PictureBox2.Location = New System.Drawing.Point(292, 62)
+        Me.PictureBox2.Image = Global.RSTC_APP.My.Resources.Resources.Isolated_blue_t_shirt
+        Me.PictureBox2.Location = New System.Drawing.Point(319, 89)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(202, 140)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 0
         Me.PictureBox2.TabStop = False
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.RSTC_APP.My.Resources.Resources.brush_stroke_ong
-        Me.PictureBox1.Location = New System.Drawing.Point(68, 62)
+        Me.PictureBox1.Location = New System.Drawing.Point(95, 89)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(202, 140)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -90,7 +100,7 @@ Partial Class designlibrary
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(852, 478)
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox4)

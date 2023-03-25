@@ -27,9 +27,204 @@ RSTC-APP
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:RSTC_APP.My.Resources.Resources.Isolated_blue_t_shirt">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:RSTC_APP.My.Resources.Resources.Screenshot_20230202_100942">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSet.CATEGORYDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSet.COLORDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSet.PRODUCTDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSet.SIZEDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSet.CATEGORYRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSet.COLORRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSet.PRODUCTRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSet.SIZERow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSet.CATEGORYRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSet.COLORRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSet.PRODUCTRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSet.SIZERowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSetTableAdapters.CATEGORYTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSetTableAdapters.COLORTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSetTableAdapters.PRODUCTTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSetTableAdapters.SIZETableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:RSTC_APP.rstcDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSTC_APP.rstcDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:RSTC_APP.rstcDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSTC_APP.rstcDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:RSTC_APP.rstcDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSTC_APP.rstcDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:RSTC_APP.rstcDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:RSTC_APP.rstcDataSetTableAdapters.TableAdapterManager.UpdateAll(RSTC_APP.rstcDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:RSTC_APP.test1DataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:RSTC_APP.test1DataSet.purchDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RSTC_APP.test1DataSet.purchRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RSTC_APP.test1DataSet.purchRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RSTC_APP.test1DataSetTableAdapters.purchTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RSTC_APP.test1DataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:RSTC_APP.test1DataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(RSTC_APP.test1DataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:RSTC_APP.test1DataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(RSTC_APP.test1DataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:RSTC_APP.test1DataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(RSTC_APP.test1DataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:RSTC_APP.test1DataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:RSTC_APP.test1DataSetTableAdapters.TableAdapterManager.UpdateAll(RSTC_APP.test1DataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:RSTC_APP.test1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:RSTC_APP.test1DataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
 </summary>
 </member>
 </members>
