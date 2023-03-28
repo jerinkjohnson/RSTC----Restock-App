@@ -5,13 +5,10 @@ Imports System.Data.SqlClient
 'ADD DATABASE CONNECTION TO ADD PRODUCT FORM
 Public Class Main
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
     Private Sub TShirtToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles TShirtToolStripMenuItem1.Click
-        Dim TshirtForm As New Tshirt_stock
+        Dim TshirtForm As New tshirtForm
         TshirtForm.Show()
+
     End Sub
 
     Private Sub ShowDesignsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowDesignsToolStripMenuItem.Click

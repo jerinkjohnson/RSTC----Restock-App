@@ -118,6 +118,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>rstcDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="rstcDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rstcDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="sweat-stock.Designer.vb">
       <DependentUpon>sweat-stock.vb</DependentUpon>
     </Compile>
@@ -130,10 +135,12 @@
     <Compile Include="Totebag-stock.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tshirt-stock.Designer.vb">
-      <DependentUpon>Tshirt-stock.vb</DependentUpon>
+    <Compile Include="tshirtForm.Designer.vb">
+      <DependentUpon>tshirtForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Tshirt-stock.vb" />
+    <Compile Include="tshirtForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="add-product.resx">
@@ -160,8 +167,8 @@
     <EmbeddedResource Include="Totebag-stock.resx">
       <DependentUpon>Totebag-stock.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tshirt-stock.resx">
-      <DependentUpon>Tshirt-stock.vb</DependentUpon>
+    <EmbeddedResource Include="tshirtForm.resx">
+      <DependentUpon>tshirtForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -185,6 +192,17 @@
     </None>
     <None Include="rstcDataSet.xss">
       <DependentUpon>rstcDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="rstcDataSet1.xsc">
+      <DependentUpon>rstcDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="rstcDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rstcDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rstcDataSet1.xss">
+      <DependentUpon>rstcDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -53,7 +53,16 @@ SELECT CATEGORY_ID, CATEGORY_NAME FROM CATEGORY WHERE (CATEGORY_ID = @CATEGORY_I
               <Mapping SourceColumn="CATEGORY_ID" DataSetColumn="CATEGORY_ID" />
               <Mapping SourceColumn="CATEGORY_NAME" DataSetColumn="CATEGORY_NAME" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="rstcDataConnection (MySettings)" DbObjectName="rstc.dbo.CATEGORY" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CATEGORY_ID, CATEGORY_NAME FROM dbo.CATEGORY</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="COLORTableAdapter" GeneratorDataComponentClassName="COLORTableAdapter" Name="COLOR" UserDataComponentName="COLORTableAdapter">
             <MainSource>
@@ -169,7 +178,16 @@ SELECT PROD_ID, PROD_NAME, CATEGORY, SIZE, COLOR FROM PRODUCT WHERE (PROD_ID = @
               <Mapping SourceColumn="SIZE" DataSetColumn="SIZE" />
               <Mapping SourceColumn="COLOR" DataSetColumn="COLOR" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="rstcDataConnection (MySettings)" DbObjectName="rstc.dbo.PRODUCT" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PROD_ID, PROD_NAME, CATEGORY, SIZE, COLOR FROM dbo.PRODUCT</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SIZETableAdapter" GeneratorDataComponentClassName="SIZETableAdapter" Name="SIZE" UserDataComponentName="SIZETableAdapter">
             <MainSource>

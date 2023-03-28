@@ -23,54 +23,59 @@ Partial Class add_product
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.CATEGORYBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RstcDataSet = New RSTC_APP.rstcDataSet()
         Me.CATEGORYBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RstcDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Test1DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CATEGORYTableAdapter = New RSTC_APP.rstcDataSetTableAdapters.CATEGORYTableAdapter()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ProdName1 = New System.Windows.Forms.TextBox()
-        Me.ProdCate1 = New System.Windows.Forms.TextBox()
-        Me.ProdSize1 = New System.Windows.Forms.TextBox()
-        Me.ProdCol1 = New System.Windows.Forms.TextBox()
         Me.AddProButton = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Test1DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.CATEGORYBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CATEGORYBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CATEGORYBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FillByToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.FillByToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.CATEGORYBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RstcDataSet = New RSTC_APP.rstcDataSet()
+        Me.RstcDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CATEGORYTableAdapter = New RSTC_APP.rstcDataSetTableAdapters.CATEGORYTableAdapter()
+        Me.CATEGORYBindingSource5 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RstcDataSet1 = New RSTC_APP.rstcDataSet()
+        Me.RstcDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SIZEBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SIZETableAdapter = New RSTC_APP.rstcDataSetTableAdapters.SIZETableAdapter()
+        Me.COLORBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.COLORTableAdapter = New RSTC_APP.rstcDataSetTableAdapters.COLORTableAdapter()
+        Me.SIZEBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.COLORBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.COLORBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        CType(Me.CATEGORYBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Test1DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CATEGORYBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CATEGORYBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CATEGORYBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FillByToolStrip.SuspendLayout()
         CType(Me.CATEGORYBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RstcDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CATEGORYBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RstcDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Test1DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CATEGORYBindingSource5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RstcDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RstcDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SIZEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.COLORBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SIZEBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.COLORBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.COLORBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'CATEGORYBindingSource
-        '
-        Me.CATEGORYBindingSource.DataMember = "CATEGORY"
-        Me.CATEGORYBindingSource.DataSource = Me.RstcDataSet
-        '
-        'RstcDataSet
-        '
-        Me.RstcDataSet.DataSetName = "rstcDataSet"
-        Me.RstcDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'CATEGORYBindingSource1
         '
         Me.CATEGORYBindingSource1.DataMember = "CATEGORY"
         Me.CATEGORYBindingSource1.DataSource = Me.RstcDataSetBindingSource
-        '
-        'RstcDataSetBindingSource
-        '
-        Me.RstcDataSetBindingSource.DataSource = Me.RstcDataSet
-        Me.RstcDataSetBindingSource.Position = 0
-
-        '
-        'CATEGORYTableAdapter
-        '
-        Me.CATEGORYTableAdapter.ClearBeforeFill = True
         '
         'Label1
         '
@@ -115,27 +120,6 @@ Partial Class add_product
         Me.ProdName1.Size = New System.Drawing.Size(172, 22)
         Me.ProdName1.TabIndex = 7
         '
-        'ProdCate1
-        '
-        Me.ProdCate1.Location = New System.Drawing.Point(353, 151)
-        Me.ProdCate1.Name = "ProdCate1"
-        Me.ProdCate1.Size = New System.Drawing.Size(172, 22)
-        Me.ProdCate1.TabIndex = 8
-        '
-        'ProdSize1
-        '
-        Me.ProdSize1.Location = New System.Drawing.Point(349, 217)
-        Me.ProdSize1.Name = "ProdSize1"
-        Me.ProdSize1.Size = New System.Drawing.Size(172, 22)
-        Me.ProdSize1.TabIndex = 9
-        '
-        'ProdCol1
-        '
-        Me.ProdCol1.Location = New System.Drawing.Point(349, 284)
-        Me.ProdCol1.Name = "ProdCol1"
-        Me.ProdCol1.Size = New System.Drawing.Size(172, 22)
-        Me.ProdCol1.TabIndex = 10
-        '
         'AddProButton
         '
         Me.AddProButton.Font = New System.Drawing.Font("Bolgart Display", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -146,26 +130,151 @@ Partial Class add_product
         Me.AddProButton.Text = "Add Product"
         Me.AddProButton.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'ComboBox1
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(548, 89)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
-        Me.DataGridView1.TabIndex = 12
+        Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.CATEGORYBindingSource, "CATEGORY_ID", True))
+        Me.ComboBox1.DataSource = Me.CATEGORYBindingSource5
+        Me.ComboBox1.DisplayMember = "CATEGORY_NAME"
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(349, 142)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(172, 24)
+        Me.ComboBox1.TabIndex = 12
+        Me.ComboBox1.ValueMember = "CATEGORY_ID"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.SIZEBindingSource, "SIZE_NO", True))
+        Me.ComboBox2.DataSource = Me.SIZEBindingSource1
+        Me.ComboBox2.DisplayMember = "SIZE_NAME"
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(349, 210)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(172, 24)
+        Me.ComboBox2.TabIndex = 13
+        Me.ComboBox2.ValueMember = "SIZE_NO"
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.COLORBindingSource, "COLOR_CODE", True))
+        Me.ComboBox3.DataSource = Me.COLORBindingSource2
+        Me.ComboBox3.DisplayMember = "COLOR_NAME"
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(349, 281)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(172, 24)
+        Me.ComboBox3.TabIndex = 14
+        Me.ComboBox3.ValueMember = "COLOR_CODE"
+        '
+        'CATEGORYBindingSource2
+        '
+        Me.CATEGORYBindingSource2.DataMember = "CATEGORY"
+        Me.CATEGORYBindingSource2.DataSource = Me.RstcDataSetBindingSource
+        '
+        'CATEGORYBindingSource3
+        '
+        Me.CATEGORYBindingSource3.DataMember = "CATEGORY"
+        Me.CATEGORYBindingSource3.DataSource = Me.RstcDataSetBindingSource
+        '
+        'CATEGORYBindingSource4
+        '
+        Me.CATEGORYBindingSource4.DataMember = "CATEGORY"
+        Me.CATEGORYBindingSource4.DataSource = Me.RstcDataSetBindingSource
+        '
+        'FillByToolStrip
+        '
+        Me.FillByToolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.FillByToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FillByToolStripButton})
+        Me.FillByToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.FillByToolStrip.Name = "FillByToolStrip"
+        Me.FillByToolStrip.Size = New System.Drawing.Size(800, 27)
+        Me.FillByToolStrip.TabIndex = 15
+        Me.FillByToolStrip.Text = "FillByToolStrip"
+        '
+        'FillByToolStripButton
+        '
+        Me.FillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.FillByToolStripButton.Name = "FillByToolStripButton"
+        Me.FillByToolStripButton.Size = New System.Drawing.Size(48, 24)
+        Me.FillByToolStripButton.Text = "FillBy"
+        '
+        'CATEGORYBindingSource
+        '
+        Me.CATEGORYBindingSource.DataMember = "CATEGORY"
+        Me.CATEGORYBindingSource.DataSource = Me.RstcDataSet
+        '
+        'RstcDataSet
+        '
+        Me.RstcDataSet.DataSetName = "rstcDataSet"
+        Me.RstcDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'RstcDataSetBindingSource
+        '
+        Me.RstcDataSetBindingSource.DataSource = Me.RstcDataSet
+        Me.RstcDataSetBindingSource.Position = 0
+        '
+        'CATEGORYTableAdapter
+        '
+        Me.CATEGORYTableAdapter.ClearBeforeFill = True
+        '
+        'CATEGORYBindingSource5
+        '
+        Me.CATEGORYBindingSource5.DataMember = "CATEGORY"
+        Me.CATEGORYBindingSource5.DataSource = Me.RstcDataSetBindingSource
+        '
+        'RstcDataSet1
+        '
+        Me.RstcDataSet1.DataSetName = "rstcDataSet"
+        Me.RstcDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'RstcDataSet1BindingSource
+        '
+        Me.RstcDataSet1BindingSource.DataSource = Me.RstcDataSet1
+        Me.RstcDataSet1BindingSource.Position = 0
+        '
+        'SIZEBindingSource
+        '
+        Me.SIZEBindingSource.DataMember = "SIZE"
+        Me.SIZEBindingSource.DataSource = Me.RstcDataSetBindingSource
+        '
+        'SIZETableAdapter
+        '
+        Me.SIZETableAdapter.ClearBeforeFill = True
+        '
+        'COLORBindingSource
+        '
+        Me.COLORBindingSource.DataMember = "COLOR"
+        Me.COLORBindingSource.DataSource = Me.RstcDataSet1BindingSource
+        '
+        'COLORTableAdapter
+        '
+        Me.COLORTableAdapter.ClearBeforeFill = True
+        '
+        'SIZEBindingSource1
+        '
+        Me.SIZEBindingSource1.DataMember = "SIZE"
+        Me.SIZEBindingSource1.DataSource = Me.RstcDataSetBindingSource
+        '
+        'COLORBindingSource1
+        '
+        Me.COLORBindingSource1.DataMember = "COLOR"
+        Me.COLORBindingSource1.DataSource = Me.RstcDataSetBindingSource
+        '
+        'COLORBindingSource2
+        '
+        Me.COLORBindingSource2.DataMember = "COLOR"
+        Me.COLORBindingSource2.DataSource = Me.RstcDataSet1BindingSource
         '
         'add_product
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.FillByToolStrip)
+        Me.Controls.Add(Me.ComboBox3)
+        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.AddProButton)
-        Me.Controls.Add(Me.ProdCol1)
-        Me.Controls.Add(Me.ProdSize1)
-        Me.Controls.Add(Me.ProdCate1)
         Me.Controls.Add(Me.ProdName1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -173,11 +282,24 @@ Partial Class add_product
         Me.Controls.Add(Me.Label1)
         Me.Name = "add_product"
         Me.Text = "add_product"
+        CType(Me.CATEGORYBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Test1DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CATEGORYBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CATEGORYBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CATEGORYBindingSource4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FillByToolStrip.ResumeLayout(False)
+        Me.FillByToolStrip.PerformLayout()
         CType(Me.CATEGORYBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RstcDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CATEGORYBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RstcDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CATEGORYBindingSource5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RstcDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RstcDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SIZEBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.COLORBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SIZEBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.COLORBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.COLORBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -193,9 +315,23 @@ Partial Class add_product
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents ProdName1 As TextBox
-    Friend WithEvents ProdCate1 As TextBox
-    Friend WithEvents ProdSize1 As TextBox
-    Friend WithEvents ProdCol1 As TextBox
     Friend WithEvents AddProButton As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents CATEGORYBindingSource2 As BindingSource
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents CATEGORYBindingSource3 As BindingSource
+    Friend WithEvents CATEGORYBindingSource4 As BindingSource
+    Friend WithEvents FillByToolStrip As ToolStrip
+    Friend WithEvents FillByToolStripButton As ToolStripButton
+    Friend WithEvents CATEGORYBindingSource5 As BindingSource
+    Friend WithEvents RstcDataSet1BindingSource As BindingSource
+    Friend WithEvents RstcDataSet1 As rstcDataSet
+    Friend WithEvents SIZEBindingSource As BindingSource
+    Friend WithEvents SIZETableAdapter As rstcDataSetTableAdapters.SIZETableAdapter
+    Friend WithEvents COLORBindingSource As BindingSource
+    Friend WithEvents COLORTableAdapter As rstcDataSetTableAdapters.COLORTableAdapter
+    Friend WithEvents SIZEBindingSource1 As BindingSource
+    Friend WithEvents COLORBindingSource1 As BindingSource
+    Friend WithEvents COLORBindingSource2 As BindingSource
 End Class

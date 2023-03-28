@@ -46,7 +46,7 @@ Partial Class Main
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.SystemColors.Control
         Me.Label1.Font = New System.Drawing.Font("Bolgart Display", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(293, 9)
+        Me.Label1.Location = New System.Drawing.Point(323, 22)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(212, 51)
         Me.Label1.TabIndex = 0
@@ -58,7 +58,7 @@ Partial Class Main
         Me.MenuStrip1.Font = New System.Drawing.Font("Bolgart Display", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StockAvailabilityToolStripMenuItem, Me.DesignLibraryToolStripMenuItem, Me.OrdersToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(9, 75)
+        Me.MenuStrip1.Location = New System.Drawing.Point(39, 88)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(354, 30)
         Me.MenuStrip1.TabIndex = 1
@@ -118,7 +118,7 @@ Partial Class Main
         'ShowDesignsToolStripMenuItem
         '
         Me.ShowDesignsToolStripMenuItem.Name = "ShowDesignsToolStripMenuItem"
-        Me.ShowDesignsToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ShowDesignsToolStripMenuItem.Size = New System.Drawing.Size(191, 26)
         Me.ShowDesignsToolStripMenuItem.Text = "Show Designs"
         '
         'OrdersToolStripMenuItem
@@ -131,26 +131,26 @@ Partial Class Main
         'OrderHistoryToolStripMenuItem
         '
         Me.OrderHistoryToolStripMenuItem.Name = "OrderHistoryToolStripMenuItem"
-        Me.OrderHistoryToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.OrderHistoryToolStripMenuItem.Size = New System.Drawing.Size(200, 26)
         Me.OrderHistoryToolStripMenuItem.Text = "Order History"
         '
         'ManageOrdersToolStripMenuItem
         '
         Me.ManageOrdersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateToolStripMenuItem, Me.DeleteToolStripMenuItem})
         Me.ManageOrdersToolStripMenuItem.Name = "ManageOrdersToolStripMenuItem"
-        Me.ManageOrdersToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ManageOrdersToolStripMenuItem.Size = New System.Drawing.Size(200, 26)
         Me.ManageOrdersToolStripMenuItem.Text = "Manage Orders"
         '
         'UpdateToolStripMenuItem
         '
         Me.UpdateToolStripMenuItem.Name = "UpdateToolStripMenuItem"
-        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
         Me.UpdateToolStripMenuItem.Text = "Update"
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'Main
@@ -158,7 +158,7 @@ Partial Class Main
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(824, 512)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
