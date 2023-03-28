@@ -3,18 +3,11 @@ Imports System.Data.SqlClient
 
 Public Class add_product
 
-    Private Sub add_product_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'RstcDataSet.CATEGORY' table. You can move, or remove it, as needed.
-        Me.CATEGORYTableAdapter.Fill(Me.RstcDataSet.CATEGORY)
-
-
-    End Sub
-
 
 
     Private Sub AddProButton_Click(sender As Object, e As EventArgs) Handles AddProButton.Click
         Dim con As New SqlConnection
-        
+
         con.ConnectionString = "Data Source=Grace;Initial Catalog=rstc;Persist Security Info=True;User ID=sa;Password=Devjerin@2023"
         con.Open()
         'cmd = con.CreateCommand()
