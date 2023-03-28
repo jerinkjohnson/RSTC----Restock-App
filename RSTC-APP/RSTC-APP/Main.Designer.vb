@@ -37,6 +37,7 @@ Partial Class Main
         Me.OrderHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManageOrdersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -59,7 +60,7 @@ Partial Class Main
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StockAvailabilityToolStripMenuItem, Me.DesignLibraryToolStripMenuItem, Me.OrdersToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(9, 75)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(504, 30)
+        Me.MenuStrip1.Size = New System.Drawing.Size(354, 30)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -80,25 +81,25 @@ Partial Class Main
         'TShirtToolStripMenuItem1
         '
         Me.TShirtToolStripMenuItem1.Name = "TShirtToolStripMenuItem1"
-        Me.TShirtToolStripMenuItem1.Size = New System.Drawing.Size(169, 26)
+        Me.TShirtToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
         Me.TShirtToolStripMenuItem1.Text = "T Shirt"
         '
         'HoodiesToolStripMenuItem1
         '
         Me.HoodiesToolStripMenuItem1.Name = "HoodiesToolStripMenuItem1"
-        Me.HoodiesToolStripMenuItem1.Size = New System.Drawing.Size(169, 26)
+        Me.HoodiesToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
         Me.HoodiesToolStripMenuItem1.Text = "Hoodies"
         '
         'SweatshirtToolStripMenuItem1
         '
         Me.SweatshirtToolStripMenuItem1.Name = "SweatshirtToolStripMenuItem1"
-        Me.SweatshirtToolStripMenuItem1.Size = New System.Drawing.Size(169, 26)
+        Me.SweatshirtToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
         Me.SweatshirtToolStripMenuItem1.Text = "Sweatshirt"
         '
         'ToteBagToolStripMenuItem
         '
         Me.ToteBagToolStripMenuItem.Name = "ToteBagToolStripMenuItem"
-        Me.ToteBagToolStripMenuItem.Size = New System.Drawing.Size(169, 26)
+        Me.ToteBagToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ToteBagToolStripMenuItem.Text = "Tote Bag"
         '
         'HoodiesToolStripMenuItem
@@ -117,7 +118,7 @@ Partial Class Main
         'ShowDesignsToolStripMenuItem
         '
         Me.ShowDesignsToolStripMenuItem.Name = "ShowDesignsToolStripMenuItem"
-        Me.ShowDesignsToolStripMenuItem.Size = New System.Drawing.Size(191, 26)
+        Me.ShowDesignsToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ShowDesignsToolStripMenuItem.Text = "Show Designs"
         '
         'OrdersToolStripMenuItem
@@ -130,21 +131,27 @@ Partial Class Main
         'OrderHistoryToolStripMenuItem
         '
         Me.OrderHistoryToolStripMenuItem.Name = "OrderHistoryToolStripMenuItem"
-        Me.OrderHistoryToolStripMenuItem.Size = New System.Drawing.Size(200, 26)
+        Me.OrderHistoryToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.OrderHistoryToolStripMenuItem.Text = "Order History"
         '
         'ManageOrdersToolStripMenuItem
         '
-        Me.ManageOrdersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateToolStripMenuItem})
+        Me.ManageOrdersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateToolStripMenuItem, Me.DeleteToolStripMenuItem})
         Me.ManageOrdersToolStripMenuItem.Name = "ManageOrdersToolStripMenuItem"
-        Me.ManageOrdersToolStripMenuItem.Size = New System.Drawing.Size(200, 26)
+        Me.ManageOrdersToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ManageOrdersToolStripMenuItem.Text = "Manage Orders"
         '
         'UpdateToolStripMenuItem
         '
         Me.UpdateToolStripMenuItem.Name = "UpdateToolStripMenuItem"
-        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
+        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.UpdateToolStripMenuItem.Text = "Update"
+        '
+        'DeleteToolStripMenuItem
+        '
+        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'Main
         '
@@ -180,4 +187,5 @@ Partial Class Main
     Friend WithEvents ManageOrdersToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UpdateToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ShowDesignsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteToolStripMenuItem As ToolStripMenuItem
 End Class

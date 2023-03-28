@@ -124,11 +124,6 @@
     <Compile Include="sweat-stock.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="test1DataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>test1DataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Totebag-stock.Designer.vb">
       <DependentUpon>Totebag-stock.vb</DependentUpon>
     </Compile>
@@ -191,20 +186,6 @@
     <None Include="rstcDataSet.xss">
       <DependentUpon>rstcDataSet.xsd</DependentUpon>
     </None>
-    <None Include="test1DataSet.xsc">
-      <DependentUpon>test1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="test1DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>test1DataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="test1DataSet.xss">
-      <DependentUpon>test1DataSet.xsd</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Screenshot_20230202_100942.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\brush stroke ong.png" />

@@ -1,5 +1,10 @@
-﻿
+﻿Imports System.Data
+Imports System.Data.SqlClient
+
+'TO-DO
+'ADD DATABASE CONNECTION TO ADD PRODUCT FORM
 Public Class Main
+
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
@@ -32,5 +37,9 @@ Public Class Main
     Private Sub HoodiesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HoodiesToolStripMenuItem.Click
         Dim addProducts As New add_product
         addProducts.Show()
+    End Sub
+
+    Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
