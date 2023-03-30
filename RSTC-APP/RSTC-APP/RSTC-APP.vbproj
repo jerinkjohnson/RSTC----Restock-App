@@ -79,6 +79,12 @@
     <Compile Include="add-product.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="deleteForms.Designer.vb">
+      <DependentUpon>deleteForms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="deleteForms.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="designlibrary.Designer.vb">
       <DependentUpon>designlibrary.vb</DependentUpon>
     </Compile>
@@ -141,10 +147,19 @@
     <Compile Include="tshirtForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UpdateProductForm.Designer.vb">
+      <DependentUpon>UpdateProductForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProductForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="add-product.resx">
       <DependentUpon>add-product.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteForms.resx">
+      <DependentUpon>deleteForms.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="designlibrary.resx">
       <DependentUpon>designlibrary.vb</DependentUpon>
@@ -169,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tshirtForm.resx">
       <DependentUpon>tshirtForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateProductForm.resx">
+      <DependentUpon>UpdateProductForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

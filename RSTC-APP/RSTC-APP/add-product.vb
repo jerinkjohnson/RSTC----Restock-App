@@ -20,6 +20,7 @@ Public Class add_product
 
         If cmd.ExecuteNonQuery() = 1 Then
             MessageBox.Show("Product added")
+            ProdName1.Clear()
         Else
             MessageBox.Show("Product not added")
         End If

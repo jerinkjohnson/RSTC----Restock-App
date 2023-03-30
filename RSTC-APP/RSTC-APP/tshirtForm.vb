@@ -10,7 +10,7 @@ Public Class tshirtForm
         con.Open()
         cmd = con.CreateCommand()
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "SELECT PROD_ID,PROD_NAME FROM PRODUCT where CATEGORY = 10"
+        cmd.CommandText = "SELECT PROD_ID,PROD_NAME FROM PRODUCT where CATEGORY = 10;"
         cmd.ExecuteNonQuery()
         Dim dt As New DataTable
         Dim da As New SqlDataAdapter(cmd)
@@ -19,4 +19,6 @@ Public Class tshirtForm
         con.Close()
 
     End Sub
+
+
 End Class

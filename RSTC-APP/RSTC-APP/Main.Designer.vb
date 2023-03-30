@@ -22,6 +22,7 @@ Partial Class Main
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.StockAvailabilityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -38,7 +39,26 @@ Partial Class Main
         Me.ManageOrdersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RstcDataSet = New RSTC_APP.rstcDataSet()
+        Me.RstcDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PRODUCTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PRODUCTTableAdapter = New RSTC_APP.rstcDataSetTableAdapters.PRODUCTTableAdapter()
+        Me.PRODUCTBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PRODUCTBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.DataGridView4 = New System.Windows.Forms.DataGridView()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.RstcDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RstcDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PRODUCTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PRODUCTBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PRODUCTBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -60,7 +80,7 @@ Partial Class Main
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StockAvailabilityToolStripMenuItem, Me.DesignLibraryToolStripMenuItem, Me.OrdersToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(39, 88)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(354, 30)
+        Me.MenuStrip1.Size = New System.Drawing.Size(504, 30)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -75,37 +95,37 @@ Partial Class Main
         '
         Me.TShirtToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TShirtToolStripMenuItem1, Me.HoodiesToolStripMenuItem1, Me.SweatshirtToolStripMenuItem1, Me.ToteBagToolStripMenuItem})
         Me.TShirtToolStripMenuItem.Name = "TShirtToolStripMenuItem"
-        Me.TShirtToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.TShirtToolStripMenuItem.Size = New System.Drawing.Size(190, 26)
         Me.TShirtToolStripMenuItem.Text = "Products"
         '
         'TShirtToolStripMenuItem1
         '
         Me.TShirtToolStripMenuItem1.Name = "TShirtToolStripMenuItem1"
-        Me.TShirtToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.TShirtToolStripMenuItem1.Size = New System.Drawing.Size(169, 26)
         Me.TShirtToolStripMenuItem1.Text = "T Shirt"
         '
         'HoodiesToolStripMenuItem1
         '
         Me.HoodiesToolStripMenuItem1.Name = "HoodiesToolStripMenuItem1"
-        Me.HoodiesToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.HoodiesToolStripMenuItem1.Size = New System.Drawing.Size(169, 26)
         Me.HoodiesToolStripMenuItem1.Text = "Hoodies"
         '
         'SweatshirtToolStripMenuItem1
         '
         Me.SweatshirtToolStripMenuItem1.Name = "SweatshirtToolStripMenuItem1"
-        Me.SweatshirtToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.SweatshirtToolStripMenuItem1.Size = New System.Drawing.Size(169, 26)
         Me.SweatshirtToolStripMenuItem1.Text = "Sweatshirt"
         '
         'ToteBagToolStripMenuItem
         '
         Me.ToteBagToolStripMenuItem.Name = "ToteBagToolStripMenuItem"
-        Me.ToteBagToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ToteBagToolStripMenuItem.Size = New System.Drawing.Size(169, 26)
         Me.ToteBagToolStripMenuItem.Text = "Tote Bag"
         '
         'HoodiesToolStripMenuItem
         '
         Me.HoodiesToolStripMenuItem.Name = "HoodiesToolStripMenuItem"
-        Me.HoodiesToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.HoodiesToolStripMenuItem.Size = New System.Drawing.Size(190, 26)
         Me.HoodiesToolStripMenuItem.Text = "Add Products"
         '
         'DesignLibraryToolStripMenuItem
@@ -131,27 +151,103 @@ Partial Class Main
         'OrderHistoryToolStripMenuItem
         '
         Me.OrderHistoryToolStripMenuItem.Name = "OrderHistoryToolStripMenuItem"
-        Me.OrderHistoryToolStripMenuItem.Size = New System.Drawing.Size(200, 26)
+        Me.OrderHistoryToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.OrderHistoryToolStripMenuItem.Text = "Order History"
         '
         'ManageOrdersToolStripMenuItem
         '
         Me.ManageOrdersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateToolStripMenuItem, Me.DeleteToolStripMenuItem})
         Me.ManageOrdersToolStripMenuItem.Name = "ManageOrdersToolStripMenuItem"
-        Me.ManageOrdersToolStripMenuItem.Size = New System.Drawing.Size(200, 26)
+        Me.ManageOrdersToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ManageOrdersToolStripMenuItem.Text = "Manage Orders"
         '
         'UpdateToolStripMenuItem
         '
         Me.UpdateToolStripMenuItem.Name = "UpdateToolStripMenuItem"
-        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
+        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.UpdateToolStripMenuItem.Text = "Update"
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.DeleteToolStripMenuItem.Text = "Delete"
+        '
+        'RstcDataSet
+        '
+        Me.RstcDataSet.DataSetName = "rstcDataSet"
+        Me.RstcDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'RstcDataSetBindingSource
+        '
+        Me.RstcDataSetBindingSource.DataSource = Me.RstcDataSet
+        Me.RstcDataSetBindingSource.Position = 0
+        '
+        'PRODUCTBindingSource
+        '
+        Me.PRODUCTBindingSource.DataMember = "PRODUCT"
+        Me.PRODUCTBindingSource.DataSource = Me.RstcDataSet
+        '
+        'PRODUCTTableAdapter
+        '
+        Me.PRODUCTTableAdapter.ClearBeforeFill = True
+        '
+        'PRODUCTBindingSource2
+        '
+        Me.PRODUCTBindingSource2.DataMember = "PRODUCT"
+        Me.PRODUCTBindingSource2.DataSource = Me.RstcDataSetBindingSource
+        '
+        'PRODUCTBindingSource1
+        '
+        Me.PRODUCTBindingSource1.DataMember = "PRODUCT"
+        Me.PRODUCTBindingSource1.DataSource = Me.RstcDataSetBindingSource
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight
+        Me.DataGridView1.Location = New System.Drawing.Point(52, 156)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(259, 150)
+        Me.DataGridView1.TabIndex = 2
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.GridColor = System.Drawing.SystemColors.ControlLightLight
+        Me.DataGridView2.Location = New System.Drawing.Point(342, 156)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.RowHeadersWidth = 51
+        Me.DataGridView2.RowTemplate.Height = 24
+        Me.DataGridView2.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView2.TabIndex = 3
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.GridColor = System.Drawing.SystemColors.ControlLightLight
+        Me.DataGridView3.Location = New System.Drawing.Point(342, 337)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.RowHeadersWidth = 51
+        Me.DataGridView3.RowTemplate.Height = 24
+        Me.DataGridView3.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView3.TabIndex = 4
+        '
+        'DataGridView4
+        '
+        Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView4.GridColor = System.Drawing.SystemColors.ControlLightLight
+        Me.DataGridView4.Location = New System.Drawing.Point(52, 337)
+        Me.DataGridView4.Name = "DataGridView4"
+        Me.DataGridView4.RowHeadersWidth = 51
+        Me.DataGridView4.RowTemplate.Height = 24
+        Me.DataGridView4.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView4.TabIndex = 5
         '
         'Main
         '
@@ -159,6 +255,10 @@ Partial Class Main
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(824, 512)
+        Me.Controls.Add(Me.DataGridView4)
+        Me.Controls.Add(Me.DataGridView3)
+        Me.Controls.Add(Me.DataGridView2)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -167,6 +267,15 @@ Partial Class Main
         Me.Text = "RSTC"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.RstcDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RstcDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PRODUCTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PRODUCTBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PRODUCTBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -188,4 +297,14 @@ Partial Class Main
     Friend WithEvents UpdateToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ShowDesignsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RstcDataSetBindingSource As BindingSource
+    Friend WithEvents RstcDataSet As rstcDataSet
+    Friend WithEvents PRODUCTBindingSource As BindingSource
+    Friend WithEvents PRODUCTTableAdapter As rstcDataSetTableAdapters.PRODUCTTableAdapter
+    Friend WithEvents PRODUCTBindingSource2 As BindingSource
+    Friend WithEvents PRODUCTBindingSource1 As BindingSource
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents DataGridView4 As DataGridView
 End Class
