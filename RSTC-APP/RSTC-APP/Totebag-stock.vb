@@ -8,7 +8,7 @@ Public Class Totebag_stock
         con.Open()
         cmd = con.CreateCommand()
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "SELECT PROD_ID,PROD_NAME FROM PRODUCT where CATEGORY = 40"
+        cmd.CommandText = "SELECT Product.PROD_ID, Product.PROD_NAME, Product.QUANTITY ,Size.SIZE_NAME FROM Product JOIN Size ON Product.SIZE = Size.SIZE_NO AND Product.SIZE = Size.SIZE_NO"
         cmd.ExecuteNonQuery()
         Dim dt As New DataTable
         Dim da As New SqlDataAdapter(cmd)

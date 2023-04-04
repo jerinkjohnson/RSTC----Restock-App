@@ -36,27 +36,28 @@ Partial Class OrderMsgBoxForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Montserrat Subrayada", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Font = New System.Drawing.Font("Montserrat Subrayada", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(152, 98)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(142, 18)
+        Me.Label1.Size = New System.Drawing.Size(150, 19)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Time to Restock"
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button1.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(77, 250)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(116, 44)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Order Now!"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.RSTC_APP.My.Resources.Resources.alarm
-        Me.PictureBox1.Location = New System.Drawing.Point(44, 98)
+        Me.PictureBox1.Location = New System.Drawing.Point(34, 108)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(71, 61)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -92,13 +93,14 @@ Partial Class OrderMsgBoxForm
         '
         'Button2
         '
+        Me.Button2.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button2.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(275, 250)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(116, 44)
         Me.Button2.TabIndex = 6
         Me.Button2.Text = "Stop Stock Alert"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Label5
         '
@@ -114,7 +116,8 @@ Partial Class OrderMsgBoxForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(464, 345)
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientSize = New System.Drawing.Size(453, 334)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label4)
@@ -123,7 +126,9 @@ Partial Class OrderMsgBoxForm
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
+        Me.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Name = "OrderMsgBoxForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "OrderMsgBox"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

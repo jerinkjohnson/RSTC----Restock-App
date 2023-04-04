@@ -11,12 +11,13 @@ Public Class add_product
         con.Open()
         'cmd = con.CreateCommand()
         'cmd.CommandType = CommandType.Text
-        Dim cmd As New SqlCommand("INSERT INTO PRODUCT (PROD_NAME,CATEGORY,SIZE,COLOR) VALUES(@PROD_NAME,@CATEGORY,@SIZE,@COLOR)", con)
+        Dim cmd As New SqlCommand("INSERT INTO PRODUCT (PROD_NAME,CATEGORY,SIZE,COLOR,QUANTITY) VALUES(@PROD_NAME,@CATEGORY,@SIZE,@COLOR,@QUANTITY)", con)
 
         cmd.Parameters.AddWithValue("@PROD_NAME", ProdName1.Text)
         cmd.Parameters.AddWithValue("@CATEGORY", ComboBox1.SelectedValue)
         cmd.Parameters.AddWithValue("@SIZE", ComboBox2.SelectedValue)
         cmd.Parameters.AddWithValue("@COLOR", ComboBox3.SelectedValue)
+        cmd.Parameters.AddWithValue("@QUANTITY", TextBox1.Text)
         'Dim ProdName As String = ProdName1.Text
 
 
@@ -49,6 +50,10 @@ Public Class add_product
     End Sub
 
     Private Sub add_product_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'RstcDataSet.PRODUCT' table. You can move, or remove it, as needed.
+        Me.PRODUCTTableAdapter.Fill(Me.RstcDataSet.PRODUCT)
+        'TODO: This line of code loads data into the 'RstcDataSet.PRODUCT' table. You can move, or remove it, as needed.
+        Me.PRODUCTTableAdapter.Fill(Me.RstcDataSet.PRODUCT)
         'TODO: This line of code loads data into the 'RstcDataSet1.COLOR' table. You can move, or remove it, as needed.
         Me.COLORTableAdapter.Fill(Me.RstcDataSet1.COLOR)
         'TODO: This line of code loads data into the 'RstcDataSet.SIZE' table. You can move, or remove it, as needed.
@@ -63,15 +68,14 @@ Public Class add_product
 
         con.ConnectionString = "Data Source=Grace;Initial Catalog=rstc;Persist Security Info=True;User ID=sa;Password=Devjerin@2023"
         con.Open()
-        'cmd = con.CreateCommand()
-        'cmd.CommandType = CommandType.Text
-        Dim cmd As New SqlCommand("INSERT INTO PRODUCT (PROD_NAME,CATEGORY,SIZE,COLOR) VALUES(@PROD_NAME,@CATEGORY,@SIZE,@COLOR)", con)
+        Dim cmd As New SqlCommand("INSERT INTO PRODUCT (PROD_NAME,CATEGORY,SIZE,COLOR,QUANTITY) VALUES(@PROD_NAME,@CATEGORY,@SIZE,@COLOR,@QUANTITY)", con)
 
         cmd.Parameters.AddWithValue("@PROD_NAME", ProdName1.Text)
         cmd.Parameters.AddWithValue("@CATEGORY", ComboBox1.SelectedValue)
         cmd.Parameters.AddWithValue("@SIZE", ComboBox2.SelectedValue)
         cmd.Parameters.AddWithValue("@COLOR", ComboBox3.SelectedValue)
-        Dim OrderInfo As String = TimeString & " : Ordered " & ProdName1.Text & " from the " & ComboBox1.Text & " section of size " & ComboBox2.Text & " and of color " & ComboBox3.Text & " "
+        cmd.Parameters.AddWithValue("@QUANTITY", TextBox1.Text)
+        Dim OrderInfo As String = TimeString & " : Placed Order of " & TextBox1.Text & " " & ProdName1.Text & " from the " & ComboBox1.Text & " section of size " & ComboBox2.Text & " and of color " & ComboBox3.Text & " "
 
 
 
@@ -91,4 +95,5 @@ Public Class add_product
         cmd1.ExecuteNonQuery()
         con.Close()
     End Sub
+
 End Class

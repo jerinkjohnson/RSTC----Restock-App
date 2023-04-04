@@ -48,9 +48,10 @@ Partial Class OrderHistoryForm
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(890, 489)
+        Me.DataGridView1.Size = New System.Drawing.Size(1069, 692)
         Me.DataGridView1.TabIndex = 0
         '
         'ORDERIDDataGridViewTextBoxColumn
@@ -101,10 +102,11 @@ Partial Class OrderHistoryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(890, 489)
+        Me.ClientSize = New System.Drawing.Size(1069, 692)
         Me.Controls.Add(Me.DataGridView1)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "OrderHistoryForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "OrderHistoryForm"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.HISTORYBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

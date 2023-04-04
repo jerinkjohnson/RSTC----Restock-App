@@ -54,6 +54,13 @@ Partial Class add_product
         Me.COLORTableAdapter = New RSTC_APP.rstcDataSetTableAdapters.COLORTableAdapter()
         Me.COLORBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.OrderButton = New System.Windows.Forms.Button()
+        Me.PRODUCTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PRODUCTTableAdapter = New RSTC_APP.rstcDataSetTableAdapters.PRODUCTTableAdapter()
+        Me.PRODUCTBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PRODUCTBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PRODUCTBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.CATEGORYBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RstcDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RstcDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,6 +78,10 @@ Partial Class add_product
         CType(Me.CATEGORYBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FillByToolStrip.SuspendLayout()
         CType(Me.COLORBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PRODUCTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PRODUCTBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PRODUCTBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PRODUCTBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CATEGORYBindingSource1
@@ -93,9 +104,9 @@ Partial Class add_product
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(169, 151)
+        Me.Label1.Location = New System.Drawing.Point(166, 168)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(157, 16)
+        Me.Label1.Size = New System.Drawing.Size(168, 18)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Product Category:"
         '
@@ -104,9 +115,9 @@ Partial Class add_product
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(169, 217)
+        Me.Label2.Location = New System.Drawing.Point(166, 236)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 16)
+        Me.Label2.Size = New System.Drawing.Size(117, 18)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Product Size"
         '
@@ -115,9 +126,9 @@ Partial Class add_product
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(169, 284)
+        Me.Label3.Location = New System.Drawing.Point(166, 301)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(136, 16)
+        Me.Label3.Size = New System.Drawing.Size(147, 18)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Product Colour"
         '
@@ -126,15 +137,15 @@ Partial Class add_product
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(169, 87)
+        Me.Label4.Location = New System.Drawing.Point(169, 59)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(120, 16)
+        Me.Label4.Size = New System.Drawing.Size(127, 18)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Product Name"
         '
         'ProdName1
         '
-        Me.ProdName1.Location = New System.Drawing.Point(349, 84)
+        Me.ProdName1.Location = New System.Drawing.Point(359, 55)
         Me.ProdName1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ProdName1.Name = "ProdName1"
         Me.ProdName1.Size = New System.Drawing.Size(172, 22)
@@ -143,7 +154,7 @@ Partial Class add_product
         'AddProButton
         '
         Me.AddProButton.Font = New System.Drawing.Font("Bolgart Display", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddProButton.Location = New System.Drawing.Point(282, 352)
+        Me.AddProButton.Location = New System.Drawing.Point(283, 377)
         Me.AddProButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.AddProButton.Name = "AddProButton"
         Me.AddProButton.Size = New System.Drawing.Size(163, 50)
@@ -157,7 +168,7 @@ Partial Class add_product
         Me.ComboBox1.DataSource = Me.CATEGORYBindingSource5
         Me.ComboBox1.DisplayMember = "CATEGORY_NAME"
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(349, 142)
+        Me.ComboBox1.Location = New System.Drawing.Point(359, 162)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(172, 24)
@@ -180,7 +191,7 @@ Partial Class add_product
         Me.ComboBox2.DataSource = Me.SIZEBindingSource1
         Me.ComboBox2.DisplayMember = "SIZE_NAME"
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(349, 210)
+        Me.ComboBox2.Location = New System.Drawing.Point(359, 230)
         Me.ComboBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(172, 24)
@@ -203,7 +214,7 @@ Partial Class add_product
         Me.ComboBox3.DataSource = Me.COLORBindingSource2
         Me.ComboBox3.DisplayMember = "COLOR_NAME"
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(349, 281)
+        Me.ComboBox3.Location = New System.Drawing.Point(359, 295)
         Me.ComboBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(172, 24)
@@ -251,7 +262,7 @@ Partial Class add_product
         Me.FillByToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FillByToolStripButton})
         Me.FillByToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.FillByToolStrip.Name = "FillByToolStrip"
-        Me.FillByToolStrip.Size = New System.Drawing.Size(800, 31)
+        Me.FillByToolStrip.Size = New System.Drawing.Size(800, 27)
         Me.FillByToolStrip.TabIndex = 15
         Me.FillByToolStrip.Text = "FillByToolStrip"
         '
@@ -259,7 +270,7 @@ Partial Class add_product
         '
         Me.FillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.FillByToolStripButton.Name = "FillByToolStripButton"
-        Me.FillByToolStripButton.Size = New System.Drawing.Size(48, 28)
+        Me.FillByToolStripButton.Size = New System.Drawing.Size(48, 24)
         Me.FillByToolStripButton.Text = "FillBy"
         '
         'CATEGORYTableAdapter
@@ -282,7 +293,7 @@ Partial Class add_product
         'OrderButton
         '
         Me.OrderButton.Font = New System.Drawing.Font("Bolgart Display", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OrderButton.Location = New System.Drawing.Point(282, 352)
+        Me.OrderButton.Location = New System.Drawing.Point(283, 377)
         Me.OrderButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.OrderButton.Name = "OrderButton"
         Me.OrderButton.Size = New System.Drawing.Size(163, 50)
@@ -290,12 +301,56 @@ Partial Class add_product
         Me.OrderButton.Text = "Order Product"
         Me.OrderButton.UseVisualStyleBackColor = True
         '
+        'PRODUCTBindingSource
+        '
+        Me.PRODUCTBindingSource.DataMember = "PRODUCT"
+        Me.PRODUCTBindingSource.DataSource = Me.RstcDataSetBindingSource
+        '
+        'PRODUCTTableAdapter
+        '
+        Me.PRODUCTTableAdapter.ClearBeforeFill = True
+        '
+        'PRODUCTBindingSource1
+        '
+        Me.PRODUCTBindingSource1.DataMember = "PRODUCT"
+        Me.PRODUCTBindingSource1.DataSource = Me.RstcDataSetBindingSource
+        '
+        'PRODUCTBindingSource2
+        '
+        Me.PRODUCTBindingSource2.DataMember = "PRODUCT"
+        Me.PRODUCTBindingSource2.DataSource = Me.RstcDataSetBindingSource
+        '
+        'PRODUCTBindingSource3
+        '
+        Me.PRODUCTBindingSource3.DataMember = "PRODUCT"
+        Me.PRODUCTBindingSource3.DataSource = Me.RstcDataSetBindingSource
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(359, 105)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(172, 22)
+        Me.TextBox1.TabIndex = 20
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(166, 109)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(160, 18)
+        Me.Label5.TabIndex = 19
+        Me.Label5.Text = "Product Quantity"
+        '
         'add_product
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.RSTC_APP.My.Resources.Resources.RSTC_BG2
+        Me.BackgroundImage = Global.RSTC_APP.My.Resources.Resources.RSTC_BG3
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.OrderButton)
         Me.Controls.Add(Me.FillByToolStrip)
         Me.Controls.Add(Me.ComboBox3)
@@ -328,6 +383,10 @@ Partial Class add_product
         Me.FillByToolStrip.ResumeLayout(False)
         Me.FillByToolStrip.PerformLayout()
         CType(Me.COLORBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PRODUCTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PRODUCTBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PRODUCTBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PRODUCTBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -363,4 +422,11 @@ Partial Class add_product
     Friend WithEvents COLORBindingSource1 As BindingSource
     Friend WithEvents COLORBindingSource2 As BindingSource
     Friend WithEvents OrderButton As Button
+    Friend WithEvents PRODUCTBindingSource As BindingSource
+    Friend WithEvents PRODUCTTableAdapter As rstcDataSetTableAdapters.PRODUCTTableAdapter
+    Friend WithEvents PRODUCTBindingSource1 As BindingSource
+    Friend WithEvents PRODUCTBindingSource2 As BindingSource
+    Friend WithEvents PRODUCTBindingSource3 As BindingSource
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label5 As Label
 End Class

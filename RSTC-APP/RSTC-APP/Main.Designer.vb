@@ -27,6 +27,28 @@ Partial Class Main
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.StockAvailabilityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DesignLibraryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OrdersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RstcDataSet = New RSTC_APP.rstcDataSet()
+        Me.RstcDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PRODUCTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PRODUCTTableAdapter = New RSTC_APP.rstcDataSetTableAdapters.PRODUCTTableAdapter()
+        Me.PRODUCTBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PRODUCTBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.TShirtToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TShirtToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.HoodiesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -36,37 +58,17 @@ Partial Class Main
         Me.AutoAlertToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EnableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DesignLibraryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowDesignsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OrdersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManageOrdersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PlaceOrderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OrderHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RstcDataSet = New RSTC_APP.rstcDataSet()
-        Me.RstcDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PRODUCTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PRODUCTTableAdapter = New RSTC_APP.rstcDataSetTableAdapters.PRODUCTTableAdapter()
-        Me.PRODUCTBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PRODUCTBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.SalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OfflineToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OnlineToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.RstcDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RstcDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,10 +96,10 @@ Partial Class Main
         Me.MenuStrip1.Font = New System.Drawing.Font("Bolgart Display", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StockAvailabilityToolStripMenuItem, Me.DesignLibraryToolStripMenuItem, Me.OrdersToolStripMenuItem, Me.SalesToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(156, 91)
+        Me.MenuStrip1.Location = New System.Drawing.Point(124, 93)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(415, 30)
+        Me.MenuStrip1.Size = New System.Drawing.Size(464, 30)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -109,74 +111,12 @@ Partial Class Main
         Me.StockAvailabilityToolStripMenuItem.Size = New System.Drawing.Size(149, 26)
         Me.StockAvailabilityToolStripMenuItem.Text = "Stock Availability"
         '
-        'TShirtToolStripMenuItem
-        '
-        Me.TShirtToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TShirtToolStripMenuItem1, Me.HoodiesToolStripMenuItem1, Me.SweatshirtToolStripMenuItem1, Me.ToteBagToolStripMenuItem})
-        Me.TShirtToolStripMenuItem.Name = "TShirtToolStripMenuItem"
-        Me.TShirtToolStripMenuItem.Size = New System.Drawing.Size(190, 26)
-        Me.TShirtToolStripMenuItem.Text = "Products"
-        '
-        'TShirtToolStripMenuItem1
-        '
-        Me.TShirtToolStripMenuItem1.Name = "TShirtToolStripMenuItem1"
-        Me.TShirtToolStripMenuItem1.Size = New System.Drawing.Size(169, 26)
-        Me.TShirtToolStripMenuItem1.Text = "T Shirt"
-        '
-        'HoodiesToolStripMenuItem1
-        '
-        Me.HoodiesToolStripMenuItem1.Name = "HoodiesToolStripMenuItem1"
-        Me.HoodiesToolStripMenuItem1.Size = New System.Drawing.Size(169, 26)
-        Me.HoodiesToolStripMenuItem1.Text = "Hoodies"
-        '
-        'SweatshirtToolStripMenuItem1
-        '
-        Me.SweatshirtToolStripMenuItem1.Name = "SweatshirtToolStripMenuItem1"
-        Me.SweatshirtToolStripMenuItem1.Size = New System.Drawing.Size(169, 26)
-        Me.SweatshirtToolStripMenuItem1.Text = "Sweatshirt"
-        '
-        'ToteBagToolStripMenuItem
-        '
-        Me.ToteBagToolStripMenuItem.Name = "ToteBagToolStripMenuItem"
-        Me.ToteBagToolStripMenuItem.Size = New System.Drawing.Size(169, 26)
-        Me.ToteBagToolStripMenuItem.Text = "Tote Bag"
-        '
-        'HoodiesToolStripMenuItem
-        '
-        Me.HoodiesToolStripMenuItem.Name = "HoodiesToolStripMenuItem"
-        Me.HoodiesToolStripMenuItem.Size = New System.Drawing.Size(190, 26)
-        Me.HoodiesToolStripMenuItem.Text = "Add Products"
-        '
-        'AutoAlertToolStripMenuItem
-        '
-        Me.AutoAlertToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnableToolStripMenuItem, Me.DisableToolStripMenuItem})
-        Me.AutoAlertToolStripMenuItem.Name = "AutoAlertToolStripMenuItem"
-        Me.AutoAlertToolStripMenuItem.Size = New System.Drawing.Size(190, 26)
-        Me.AutoAlertToolStripMenuItem.Text = "Auto Alert"
-        '
-        'EnableToolStripMenuItem
-        '
-        Me.EnableToolStripMenuItem.Name = "EnableToolStripMenuItem"
-        Me.EnableToolStripMenuItem.Size = New System.Drawing.Size(146, 26)
-        Me.EnableToolStripMenuItem.Text = "Enable"
-        '
-        'DisableToolStripMenuItem
-        '
-        Me.DisableToolStripMenuItem.Name = "DisableToolStripMenuItem"
-        Me.DisableToolStripMenuItem.Size = New System.Drawing.Size(146, 26)
-        Me.DisableToolStripMenuItem.Text = "Disable"
-        '
         'DesignLibraryToolStripMenuItem
         '
         Me.DesignLibraryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowDesignsToolStripMenuItem})
         Me.DesignLibraryToolStripMenuItem.Name = "DesignLibraryToolStripMenuItem"
         Me.DesignLibraryToolStripMenuItem.Size = New System.Drawing.Size(125, 26)
         Me.DesignLibraryToolStripMenuItem.Text = "Design Library"
-        '
-        'ShowDesignsToolStripMenuItem
-        '
-        Me.ShowDesignsToolStripMenuItem.Name = "ShowDesignsToolStripMenuItem"
-        Me.ShowDesignsToolStripMenuItem.Size = New System.Drawing.Size(191, 26)
-        Me.ShowDesignsToolStripMenuItem.Text = "Show Designs"
         '
         'OrdersToolStripMenuItem
         '
@@ -185,36 +125,12 @@ Partial Class Main
         Me.OrdersToolStripMenuItem.Size = New System.Drawing.Size(72, 26)
         Me.OrdersToolStripMenuItem.Text = "Orders"
         '
-        'ManageOrdersToolStripMenuItem
+        'SalesToolStripMenuItem
         '
-        Me.ManageOrdersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateToolStripMenuItem, Me.DeleteToolStripMenuItem})
-        Me.ManageOrdersToolStripMenuItem.Name = "ManageOrdersToolStripMenuItem"
-        Me.ManageOrdersToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.ManageOrdersToolStripMenuItem.Text = "Manage Orders"
-        '
-        'UpdateToolStripMenuItem
-        '
-        Me.UpdateToolStripMenuItem.Name = "UpdateToolStripMenuItem"
-        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
-        Me.UpdateToolStripMenuItem.Text = "Update"
-        '
-        'DeleteToolStripMenuItem
-        '
-        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
-        Me.DeleteToolStripMenuItem.Text = "Delete"
-        '
-        'PlaceOrderToolStripMenuItem
-        '
-        Me.PlaceOrderToolStripMenuItem.Name = "PlaceOrderToolStripMenuItem"
-        Me.PlaceOrderToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.PlaceOrderToolStripMenuItem.Text = "Place Order"
-        '
-        'OrderHistoryToolStripMenuItem
-        '
-        Me.OrderHistoryToolStripMenuItem.Name = "OrderHistoryToolStripMenuItem"
-        Me.OrderHistoryToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.OrderHistoryToolStripMenuItem.Text = "Order History"
+        Me.SalesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OfflineToolStripMenuItem, Me.OnlineToolStripMenuItem})
+        Me.SalesToolStripMenuItem.Name = "SalesToolStripMenuItem"
+        Me.SalesToolStripMenuItem.Size = New System.Drawing.Size(111, 26)
+        Me.SalesToolStripMenuItem.Text = "Sales Status"
         '
         'RstcDataSet
         '
@@ -254,37 +170,21 @@ Partial Class Main
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Montserrat Subrayada", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(268, 201)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(76, 18)
+        Me.Label2.Size = New System.Drawing.Size(79, 19)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "T - Shirt"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(385, 201)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox1.TabIndex = 7
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(385, 243)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox2.TabIndex = 9
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(268, 243)
+        Me.Label3.Font = New System.Drawing.Font("Montserrat Subrayada", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(260, 290)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(103, 18)
+        Me.Label3.Size = New System.Drawing.Size(110, 19)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Sweatshirt"
         '
@@ -292,39 +192,23 @@ Partial Class Main
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(268, 288)
+        Me.Label4.Font = New System.Drawing.Font("Montserrat Subrayada", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(268, 249)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(68, 18)
+        Me.Label4.Size = New System.Drawing.Size(71, 19)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Hoodie"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(385, 288)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox3.TabIndex = 9
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(268, 329)
+        Me.Label5.Font = New System.Drawing.Font("Montserrat Subrayada", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(268, 332)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(91, 18)
+        Me.Label5.Size = New System.Drawing.Size(96, 19)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Tote Bags"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(385, 329)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox4.TabIndex = 9
         '
         'Button1
         '
@@ -352,10 +236,10 @@ Partial Class Main
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Montserrat Subrayada", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(218, 201)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(14, 18)
+        Me.Label7.Size = New System.Drawing.Size(16, 19)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "•"
         '
@@ -363,10 +247,10 @@ Partial Class Main
         '
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(218, 246)
+        Me.Label8.Font = New System.Drawing.Font("Montserrat Subrayada", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(219, 293)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(14, 18)
+        Me.Label8.Size = New System.Drawing.Size(16, 19)
         Me.Label8.TabIndex = 12
         Me.Label8.Text = "•"
         '
@@ -374,10 +258,10 @@ Partial Class Main
         '
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(218, 288)
+        Me.Label9.Font = New System.Drawing.Font("Montserrat Subrayada", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(218, 249)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(14, 18)
+        Me.Label9.Size = New System.Drawing.Size(16, 19)
         Me.Label9.TabIndex = 12
         Me.Label9.Text = "•"
         '
@@ -385,10 +269,10 @@ Partial Class Main
         '
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(218, 329)
+        Me.Label10.Font = New System.Drawing.Font("Montserrat Subrayada", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(218, 332)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(14, 18)
+        Me.Label10.Size = New System.Drawing.Size(16, 19)
         Me.Label10.TabIndex = 12
         Me.Label10.Text = "•"
         '
@@ -403,36 +287,190 @@ Partial Class Main
         Me.Label11.TabIndex = 11
         Me.Label11.Text = "֎"
         '
-        'SalesToolStripMenuItem
+        'Timer2
         '
-        Me.SalesToolStripMenuItem.Name = "SalesToolStripMenuItem"
-        Me.SalesToolStripMenuItem.Size = New System.Drawing.Size(62, 26)
-        Me.SalesToolStripMenuItem.Text = "Sales"
+        Me.Timer2.Enabled = True
+        Me.Timer2.Interval = 5000
+        '
+        'TShirtToolStripMenuItem
+        '
+        Me.TShirtToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TShirtToolStripMenuItem1, Me.HoodiesToolStripMenuItem1, Me.SweatshirtToolStripMenuItem1, Me.ToteBagToolStripMenuItem})
+        Me.TShirtToolStripMenuItem.Image = Global.RSTC_APP.My.Resources.Resources.icons8_package_48
+        Me.TShirtToolStripMenuItem.Name = "TShirtToolStripMenuItem"
+        Me.TShirtToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.TShirtToolStripMenuItem.Text = "Products"
+        '
+        'TShirtToolStripMenuItem1
+        '
+        Me.TShirtToolStripMenuItem1.Image = Global.RSTC_APP.My.Resources.Resources.icons8_t_shirt_64
+        Me.TShirtToolStripMenuItem1.Name = "TShirtToolStripMenuItem1"
+        Me.TShirtToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.TShirtToolStripMenuItem1.Text = "T Shirt"
+        '
+        'HoodiesToolStripMenuItem1
+        '
+        Me.HoodiesToolStripMenuItem1.Image = Global.RSTC_APP.My.Resources.Resources.sweater
+        Me.HoodiesToolStripMenuItem1.Name = "HoodiesToolStripMenuItem1"
+        Me.HoodiesToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.HoodiesToolStripMenuItem1.Text = "Hoodies"
+        '
+        'SweatshirtToolStripMenuItem1
+        '
+        Me.SweatshirtToolStripMenuItem1.Image = Global.RSTC_APP.My.Resources.Resources.hoodie
+        Me.SweatshirtToolStripMenuItem1.Name = "SweatshirtToolStripMenuItem1"
+        Me.SweatshirtToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.SweatshirtToolStripMenuItem1.Text = "Sweatshirt"
+        '
+        'ToteBagToolStripMenuItem
+        '
+        Me.ToteBagToolStripMenuItem.Image = Global.RSTC_APP.My.Resources.Resources.tote_bag
+        Me.ToteBagToolStripMenuItem.Name = "ToteBagToolStripMenuItem"
+        Me.ToteBagToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ToteBagToolStripMenuItem.Text = "Tote Bag"
+        '
+        'HoodiesToolStripMenuItem
+        '
+        Me.HoodiesToolStripMenuItem.Image = Global.RSTC_APP.My.Resources.Resources.icons8_add_product_48
+        Me.HoodiesToolStripMenuItem.Name = "HoodiesToolStripMenuItem"
+        Me.HoodiesToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.HoodiesToolStripMenuItem.Text = "Add Products"
+        '
+        'AutoAlertToolStripMenuItem
+        '
+        Me.AutoAlertToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnableToolStripMenuItem, Me.DisableToolStripMenuItem})
+        Me.AutoAlertToolStripMenuItem.Image = Global.RSTC_APP.My.Resources.Resources.alarm
+        Me.AutoAlertToolStripMenuItem.Name = "AutoAlertToolStripMenuItem"
+        Me.AutoAlertToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.AutoAlertToolStripMenuItem.Text = "Auto Alert"
+        '
+        'EnableToolStripMenuItem
+        '
+        Me.EnableToolStripMenuItem.Image = Global.RSTC_APP.My.Resources.Resources.icons8_done_48
+        Me.EnableToolStripMenuItem.Name = "EnableToolStripMenuItem"
+        Me.EnableToolStripMenuItem.Size = New System.Drawing.Size(146, 26)
+        Me.EnableToolStripMenuItem.Text = "Enable"
+        '
+        'DisableToolStripMenuItem
+        '
+        Me.DisableToolStripMenuItem.Image = Global.RSTC_APP.My.Resources.Resources.icons8_cross_mark_48
+        Me.DisableToolStripMenuItem.Name = "DisableToolStripMenuItem"
+        Me.DisableToolStripMenuItem.Size = New System.Drawing.Size(146, 26)
+        Me.DisableToolStripMenuItem.Text = "Disable"
+        '
+        'ShowDesignsToolStripMenuItem
+        '
+        Me.ShowDesignsToolStripMenuItem.Image = Global.RSTC_APP.My.Resources.Resources.icons8_dribbble_64
+        Me.ShowDesignsToolStripMenuItem.Name = "ShowDesignsToolStripMenuItem"
+        Me.ShowDesignsToolStripMenuItem.Size = New System.Drawing.Size(191, 26)
+        Me.ShowDesignsToolStripMenuItem.Text = "Show Designs"
+        '
+        'ManageOrdersToolStripMenuItem
+        '
+        Me.ManageOrdersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteToolStripMenuItem})
+        Me.ManageOrdersToolStripMenuItem.Image = Global.RSTC_APP.My.Resources.Resources.icons8_purchase_order_48
+        Me.ManageOrdersToolStripMenuItem.Name = "ManageOrdersToolStripMenuItem"
+        Me.ManageOrdersToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ManageOrdersToolStripMenuItem.Text = "Manage Orders"
+        '
+        'DeleteToolStripMenuItem
+        '
+        Me.DeleteToolStripMenuItem.Image = Global.RSTC_APP.My.Resources.Resources.icons8_delete_document_48
+        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.DeleteToolStripMenuItem.Text = "Delete"
+        '
+        'PlaceOrderToolStripMenuItem
+        '
+        Me.PlaceOrderToolStripMenuItem.Image = Global.RSTC_APP.My.Resources.Resources.icons8_create_order_48
+        Me.PlaceOrderToolStripMenuItem.Name = "PlaceOrderToolStripMenuItem"
+        Me.PlaceOrderToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.PlaceOrderToolStripMenuItem.Text = "Place Order"
+        '
+        'OrderHistoryToolStripMenuItem
+        '
+        Me.OrderHistoryToolStripMenuItem.Image = Global.RSTC_APP.My.Resources.Resources.icons8_create_order_48__1_
+        Me.OrderHistoryToolStripMenuItem.Name = "OrderHistoryToolStripMenuItem"
+        Me.OrderHistoryToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.OrderHistoryToolStripMenuItem.Text = "Order History"
+        '
+        'OfflineToolStripMenuItem
+        '
+        Me.OfflineToolStripMenuItem.Image = Global.RSTC_APP.My.Resources.Resources.icons8_offline_26
+        Me.OfflineToolStripMenuItem.Name = "OfflineToolStripMenuItem"
+        Me.OfflineToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
+        Me.OfflineToolStripMenuItem.Text = "Offline"
+        '
+        'OnlineToolStripMenuItem
+        '
+        Me.OnlineToolStripMenuItem.Image = Global.RSTC_APP.My.Resources.Resources.icons8_online_48
+        Me.OnlineToolStripMenuItem.Name = "OnlineToolStripMenuItem"
+        Me.OnlineToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
+        Me.OnlineToolStripMenuItem.Text = "Online"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(426, 201)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(61, 17)
+        Me.Label12.TabIndex = 13
+        Me.Label12.Text = "Label12"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(426, 249)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(61, 17)
+        Me.Label13.TabIndex = 14
+        Me.Label13.Text = "Label13"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(426, 290)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(61, 17)
+        Me.Label14.TabIndex = 15
+        Me.Label14.Text = "Label14"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(426, 332)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(61, 17)
+        Me.Label15.TabIndex = 16
+        Me.Label15.Text = "Label15"
         '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.BackgroundImage = Global.RSTC_APP.My.Resources.Resources.RSTC_BGOG
         Me.ClientSize = New System.Drawing.Size(710, 527)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -463,7 +501,6 @@ Partial Class Main
     Friend WithEvents ToteBagToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OrdersToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ManageOrdersToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents UpdateToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ShowDesignsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RstcDataSetBindingSource As BindingSource
@@ -477,13 +514,9 @@ Partial Class Main
     Friend WithEvents OrderHistoryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AutoAlertToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
@@ -494,4 +527,11 @@ Partial Class Main
     Friend WithEvents EnableToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DisableToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OfflineToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Timer2 As Timer
+    Friend WithEvents OnlineToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
 End Class

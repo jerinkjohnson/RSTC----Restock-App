@@ -40,9 +40,9 @@ Partial Class deleteForms
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(136, 131)
+        Me.Label1.Location = New System.Drawing.Point(105, 92)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(75, 16)
+        Me.Label1.Size = New System.Drawing.Size(80, 18)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Product"
         '
@@ -52,7 +52,7 @@ Partial Class deleteForms
         Me.ComboBox1.DataSource = Me.PRODUCTBindingSource
         Me.ComboBox1.DisplayMember = "PROD_NAME"
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(276, 127)
+        Me.ComboBox1.Location = New System.Drawing.Point(235, 86)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(220, 24)
         Me.ComboBox1.TabIndex = 1
@@ -76,7 +76,7 @@ Partial Class deleteForms
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Montserrat Subrayada", 10.8!, System.Drawing.FontStyle.Bold)
-        Me.Button1.Location = New System.Drawing.Point(250, 225)
+        Me.Button1.Location = New System.Drawing.Point(198, 206)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(138, 52)
         Me.Button1.TabIndex = 2
@@ -92,11 +92,12 @@ Partial Class deleteForms
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.RSTC_APP.My.Resources.Resources.RSTC_BG2
-        Me.ClientSize = New System.Drawing.Size(607, 366)
+        Me.ClientSize = New System.Drawing.Size(552, 334)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "deleteForms"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "deleteForms"
         CType(Me.PRODUCTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RstcDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

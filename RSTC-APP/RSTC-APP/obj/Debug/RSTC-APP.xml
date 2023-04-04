@@ -32,6 +32,81 @@ RSTC-APP
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:RSTC_APP.My.Resources.Resources.hoodie">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.icons8_add_product_48">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.icons8_create_order_48">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.icons8_create_order_48__1_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.icons8_create_order_481">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.icons8_cross_mark_48">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.icons8_delete_document_48">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.icons8_done_48">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.icons8_dribbble_64">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.icons8_offline_26">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.icons8_online_48">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.icons8_package_48">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.icons8_purchase_order_48">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.icons8_t_shirt_64">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.icons8_update_64">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:RSTC_APP.My.Resources.Resources.Isolated_blue_t_shirt">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -87,7 +162,27 @@ RSTC-APP
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:RSTC_APP.My.Resources.Resources.RSTC_BG4_rename">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:RSTC_APP.My.Resources.Resources.RSTC_BGOG">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.sweater">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.tote_bag">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.tree">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

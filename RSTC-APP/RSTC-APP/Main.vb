@@ -1,4 +1,5 @@
-﻿Imports System.Data
+﻿
+Imports System.Data
 Imports System.Data.SqlClient
 
 Public Class Main
@@ -50,20 +51,20 @@ Public Class Main
         con.Open()
         cmd = con.CreateCommand()
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "SELECT count(PROD_ID) as TShirt_STOCK FROM PRODUCT where CATEGORY = 10;"
+        cmd.CommandText = "SELECT  SUM(quantity) FROM PRODUCT WHERE CATEGORY = 10"
         Dim count1 As Integer = Convert.ToInt32(cmd.ExecuteScalar())
         TshirtC = count1
-        TextBox1.Text = TshirtC
+        Label12.Text = TshirtC
         cmd.ExecuteNonQuery()
 
 
         'hoodie
         cmd = con.CreateCommand()
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "SELECT count(PROD_ID) as Hoodie_STOCK FROM PRODUCT where CATEGORY = 20;"
+        cmd.CommandText = "SELECT  SUM(quantity) FROM PRODUCT WHERE CATEGORY = 20"
         Dim count2 As Integer = Convert.ToInt32(cmd.ExecuteScalar())
         HoodieC = count2
-        TextBox2.Text = HoodieC
+        Label13.Text = HoodieC
         cmd.ExecuteNonQuery()
 
 
@@ -71,10 +72,10 @@ Public Class Main
         'sweatshirt
         cmd = con.CreateCommand()
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "SELECT count(PROD_ID) as SweatShirt_STOCK FROM PRODUCT where CATEGORY = 30;"
+        cmd.CommandText = "SELECT  SUM(quantity) FROM PRODUCT WHERE CATEGORY = 30"
         Dim count3 As Integer = Convert.ToInt32(cmd.ExecuteScalar())
         SweatC = count3
-        TextBox3.Text = SweatC
+        Label14.Text = SweatC
         cmd.ExecuteNonQuery()
 
 
@@ -82,10 +83,10 @@ Public Class Main
         'totebag
         cmd = con.CreateCommand()
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "SELECT count(PROD_ID) as ToteBag_STOCK FROM PRODUCT where CATEGORY = 40;"
+        cmd.CommandText = "SELECT  SUM(quantity) FROM PRODUCT WHERE CATEGORY = 40"
         Dim count4 As Integer = Convert.ToInt32(cmd.ExecuteScalar())
         ToteC = count4
-        TextBox4.Text = ToteC
+        Label15.Text = ToteC
         cmd.ExecuteNonQuery()
 
         con.Close()
@@ -109,7 +110,7 @@ Public Class Main
         con1.Open()
         cmd1 = con1.CreateCommand()
         cmd1.CommandType = CommandType.Text
-        cmd1.CommandText = "SELECT count(PROD_ID) as TShirt_STOCK FROM PRODUCT where CATEGORY = 20;"
+        cmd1.CommandText = "SELECT count(PROD_ID) as TShirt_STOCK, SUM(quantity) as Total_Quantity FROM PRODUCT WHERE CATEGORY = 20 GROUP BY CATEGORY;"
         countH = Convert.ToInt32(cmd1.ExecuteScalar())
         Hstock = countH
 
@@ -186,5 +187,29 @@ Public Class Main
         Application.Restart()
     End Sub
 
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
 
+        Timer2.Start()
+        Dim con As New SqlConnection
+        Dim cmd As New SqlCommand
+        con.ConnectionString = "Data Source=Grace;Initial Catalog=rstc;Persist Security Info=True;User ID=sa;Password=Devjerin@2023"
+        con.Open()
+        cmd = con.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "UPDATE PRODUCT SET QUANTITY = QUANTITY - 1 WHERE QUANTITY > 0;"
+        cmd.ExecuteNonQuery()
+        'For testing sales
+        'MsgBox("SALES ONLINE")
+        con.Close()
+    End Sub
+
+    Private Sub OfflineToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OfflineToolStripMenuItem.Click
+        Timer2.Stop()
+    End Sub
+
+    Private Sub OnlineToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OnlineToolStripMenuItem.Click
+        Timer2.Start()
+    End Sub
 End Class
+
+

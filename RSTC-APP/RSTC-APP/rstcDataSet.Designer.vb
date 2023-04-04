@@ -1005,6 +1005,8 @@ Partial Public Class rstcDataSet
         
         Private columnCOLOR As Global.System.Data.DataColumn
         
+        Private columnQUANTITY As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -1081,6 +1083,14 @@ Partial Public Class rstcDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property QUANTITYColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnQUANTITY
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1117,9 +1127,9 @@ Partial Public Class rstcDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddPRODUCTRow(ByVal PROD_NAME As String, ByVal parentCATEGORYRowByFK__PRODUCT__CATEGOR__3D5E1FD2 As CATEGORYRow, ByVal parentSIZERowByFK__PRODUCT__SIZE__3E52440B As SIZERow, ByVal parentCOLORRowByFK__PRODUCT__COLOR__3F466844 As COLORRow) As PRODUCTRow
+        Public Overloads Function AddPRODUCTRow(ByVal PROD_NAME As String, ByVal parentCATEGORYRowByFK__PRODUCT__CATEGOR__3D5E1FD2 As CATEGORYRow, ByVal parentSIZERowByFK__PRODUCT__SIZE__3E52440B As SIZERow, ByVal parentCOLORRowByFK__PRODUCT__COLOR__3F466844 As COLORRow, ByVal QUANTITY As Integer) As PRODUCTRow
             Dim rowPRODUCTRow As PRODUCTRow = CType(Me.NewRow,PRODUCTRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, PROD_NAME, Nothing, Nothing, Nothing}
+            Dim columnValuesArray() As Object = New Object() {Nothing, PROD_NAME, Nothing, Nothing, Nothing, QUANTITY}
             If (Not (parentCATEGORYRowByFK__PRODUCT__CATEGOR__3D5E1FD2) Is Nothing) Then
                 columnValuesArray(2) = parentCATEGORYRowByFK__PRODUCT__CATEGOR__3D5E1FD2(0)
             End If
@@ -1162,6 +1172,7 @@ Partial Public Class rstcDataSet
             Me.columnCATEGORY = MyBase.Columns("CATEGORY")
             Me.columnSIZE = MyBase.Columns("SIZE")
             Me.columnCOLOR = MyBase.Columns("COLOR")
+            Me.columnQUANTITY = MyBase.Columns("QUANTITY")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1177,6 +1188,8 @@ Partial Public Class rstcDataSet
             MyBase.Columns.Add(Me.columnSIZE)
             Me.columnCOLOR = New Global.System.Data.DataColumn("COLOR", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCOLOR)
+            Me.columnQUANTITY = New Global.System.Data.DataColumn("QUANTITY", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnQUANTITY)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnPROD_ID}, true))
             Me.columnPROD_ID.AutoIncrement = true
             Me.columnPROD_ID.AutoIncrementSeed = -1
@@ -2050,6 +2063,21 @@ Partial Public Class rstcDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property QUANTITY() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tablePRODUCT.QUANTITYColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'QUANTITY' in table 'PRODUCT' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePRODUCT.QUANTITYColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property CATEGORYRow() As CATEGORYRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK__PRODUCT__CATEGOR__3D5E1FD2")),CATEGORYRow)
@@ -2126,6 +2154,18 @@ Partial Public Class rstcDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetCOLORNull()
             Me(Me.tablePRODUCT.COLORColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsQUANTITYNull() As Boolean
+            Return Me.IsNull(Me.tablePRODUCT.QUANTITYColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetQUANTITYNull()
+            Me(Me.tablePRODUCT.QUANTITYColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -3213,14 +3253,16 @@ Namespace rstcDataSetTableAdapters
             tableMapping.ColumnMappings.Add("CATEGORY", "CATEGORY")
             tableMapping.ColumnMappings.Add("SIZE", "SIZE")
             tableMapping.ColumnMappings.Add("COLOR", "COLOR")
+            tableMapping.ColumnMappings.Add("QUANTITY", "QUANTITY")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[PRODUCT] WHERE (([PROD_ID] = @Original_PROD_ID) AND ([PROD_NAM"& _ 
-                "E] = @Original_PROD_NAME) AND ((@IsNull_CATEGORY = 1 AND [CATEGORY] IS NULL) OR "& _ 
-                "([CATEGORY] = @Original_CATEGORY)) AND ((@IsNull_SIZE = 1 AND [SIZE] IS NULL) OR"& _ 
-                " ([SIZE] = @Original_SIZE)) AND ((@IsNull_COLOR = 1 AND [COLOR] IS NULL) OR ([CO"& _ 
-                "LOR] = @Original_COLOR)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [PRODUCT] WHERE (([PROD_ID] = @Original_PROD_ID) AND ([PROD_NAME] = @"& _ 
+                "Original_PROD_NAME) AND ((@IsNull_CATEGORY = 1 AND [CATEGORY] IS NULL) OR ([CATE"& _ 
+                "GORY] = @Original_CATEGORY)) AND ((@IsNull_SIZE = 1 AND [SIZE] IS NULL) OR ([SIZ"& _ 
+                "E] = @Original_SIZE)) AND ((@IsNull_COLOR = 1 AND [COLOR] IS NULL) OR ([COLOR] ="& _ 
+                " @Original_COLOR)) AND ((@IsNull_QUANTITY = 1 AND [QUANTITY] IS NULL) OR ([QUANT"& _ 
+                "ITY] = @Original_QUANTITY)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PROD_ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PROD_ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PROD_NAME", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PROD_NAME", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -3230,30 +3272,36 @@ Namespace rstcDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SIZE", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SIZE", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_COLOR", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COLOR", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_COLOR", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COLOR", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_QUANTITY", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "QUANTITY", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_QUANTITY", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "QUANTITY", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[PRODUCT] ([PROD_NAME], [CATEGORY], [SIZE], [COLOR]) VALUES (@P"& _ 
-                "ROD_NAME, @CATEGORY, @SIZE, @COLOR);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT PROD_ID, PROD_NAME, CATEGORY, SIZE,"& _ 
-                " COLOR FROM PRODUCT WHERE (PROD_ID = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [PRODUCT] ([PROD_NAME], [CATEGORY], [SIZE], [COLOR], [QUANTITY]) VALU"& _ 
+                "ES (@PROD_NAME, @CATEGORY, @SIZE, @COLOR, @QUANTITY);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT PROD_ID, PROD_NAME"& _ 
+                ", CATEGORY, SIZE, COLOR, QUANTITY FROM PRODUCT WHERE (PROD_ID = SCOPE_IDENTITY()"& _ 
+                ")"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PROD_NAME", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PROD_NAME", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CATEGORY", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CATEGORY", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SIZE", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SIZE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@COLOR", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COLOR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@QUANTITY", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "QUANTITY", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[PRODUCT] SET [PROD_NAME] = @PROD_NAME, [CATEGORY] = @CATEGORY, [SIZ"& _ 
-                "E] = @SIZE, [COLOR] = @COLOR WHERE (([PROD_ID] = @Original_PROD_ID) AND ([PROD_N"& _ 
-                "AME] = @Original_PROD_NAME) AND ((@IsNull_CATEGORY = 1 AND [CATEGORY] IS NULL) O"& _ 
-                "R ([CATEGORY] = @Original_CATEGORY)) AND ((@IsNull_SIZE = 1 AND [SIZE] IS NULL) "& _ 
-                "OR ([SIZE] = @Original_SIZE)) AND ((@IsNull_COLOR = 1 AND [COLOR] IS NULL) OR (["& _ 
-                "COLOR] = @Original_COLOR)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT PROD_ID, PROD_NAME, CATEGORY, SIZE, COLOR F"& _ 
-                "ROM PRODUCT WHERE (PROD_ID = @PROD_ID)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [PRODUCT] SET [PROD_NAME] = @PROD_NAME, [CATEGORY] = @CATEGORY, [SIZE] = @"& _ 
+                "SIZE, [COLOR] = @COLOR, [QUANTITY] = @QUANTITY WHERE (([PROD_ID] = @Original_PRO"& _ 
+                "D_ID) AND ([PROD_NAME] = @Original_PROD_NAME) AND ((@IsNull_CATEGORY = 1 AND [CA"& _ 
+                "TEGORY] IS NULL) OR ([CATEGORY] = @Original_CATEGORY)) AND ((@IsNull_SIZE = 1 AN"& _ 
+                "D [SIZE] IS NULL) OR ([SIZE] = @Original_SIZE)) AND ((@IsNull_COLOR = 1 AND [COL"& _ 
+                "OR] IS NULL) OR ([COLOR] = @Original_COLOR)) AND ((@IsNull_QUANTITY = 1 AND [QUA"& _ 
+                "NTITY] IS NULL) OR ([QUANTITY] = @Original_QUANTITY)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT PROD_ID, PROD_NA"& _ 
+                "ME, CATEGORY, SIZE, COLOR, QUANTITY FROM PRODUCT WHERE (PROD_ID = @PROD_ID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PROD_NAME", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PROD_NAME", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CATEGORY", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CATEGORY", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SIZE", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SIZE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@COLOR", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COLOR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@QUANTITY", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "QUANTITY", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PROD_ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PROD_ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PROD_NAME", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PROD_NAME", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_CATEGORY", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CATEGORY", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -3262,6 +3310,8 @@ Namespace rstcDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SIZE", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SIZE", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_COLOR", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COLOR", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_COLOR", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COLOR", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_QUANTITY", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "QUANTITY", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_QUANTITY", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "QUANTITY", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PROD_ID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "PROD_ID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
@@ -3278,11 +3328,11 @@ Namespace rstcDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT PROD_ID, PROD_NAME, CATEGORY, SIZE, COLOR FROM dbo.PRODUCT"
+            Me._commandCollection(0).CommandText = "SELECT PROD_ID, PROD_NAME, CATEGORY, SIZE, COLOR, QUANTITY FROM PRODUCT"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT PROD_ID, PROD_NAME, CATEGORY, SIZE, COLOR FROM dbo.PRODUCT"
+            Me._commandCollection(1).CommandText = "SELECT CATEGORY, COLOR, PROD_ID, PROD_NAME, QUANTITY, SIZE FROM PRODUCT"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -3355,7 +3405,7 @@ Namespace rstcDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_PROD_ID As Integer, ByVal Original_PROD_NAME As String, ByVal Original_CATEGORY As Global.System.Nullable(Of Integer), ByVal Original_SIZE As Global.System.Nullable(Of Integer), ByVal Original_COLOR As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_PROD_ID As Integer, ByVal Original_PROD_NAME As String, ByVal Original_CATEGORY As Global.System.Nullable(Of Integer), ByVal Original_SIZE As Global.System.Nullable(Of Integer), ByVal Original_COLOR As Global.System.Nullable(Of Integer), ByVal Original_QUANTITY As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_PROD_ID,Integer)
             If (Original_PROD_NAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_PROD_NAME")
@@ -3383,6 +3433,13 @@ Namespace rstcDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(6).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(7).Value = Global.System.DBNull.Value
             End If
+            If (Original_QUANTITY.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_QUANTITY.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -3402,7 +3459,7 @@ Namespace rstcDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal PROD_NAME As String, ByVal CATEGORY As Global.System.Nullable(Of Integer), ByVal SIZE As Global.System.Nullable(Of Integer), ByVal COLOR As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Insert(ByVal PROD_NAME As String, ByVal CATEGORY As Global.System.Nullable(Of Integer), ByVal SIZE As Global.System.Nullable(Of Integer), ByVal COLOR As Global.System.Nullable(Of Integer), ByVal QUANTITY As Global.System.Nullable(Of Integer)) As Integer
             If (PROD_NAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("PROD_NAME")
             Else
@@ -3423,6 +3480,11 @@ Namespace rstcDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
+            If (QUANTITY.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(QUANTITY.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -3442,7 +3504,7 @@ Namespace rstcDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal PROD_NAME As String, ByVal CATEGORY As Global.System.Nullable(Of Integer), ByVal SIZE As Global.System.Nullable(Of Integer), ByVal COLOR As Global.System.Nullable(Of Integer), ByVal Original_PROD_ID As Integer, ByVal Original_PROD_NAME As String, ByVal Original_CATEGORY As Global.System.Nullable(Of Integer), ByVal Original_SIZE As Global.System.Nullable(Of Integer), ByVal Original_COLOR As Global.System.Nullable(Of Integer), ByVal PROD_ID As Integer) As Integer
+        Public Overloads Overridable Function Update(ByVal PROD_NAME As String, ByVal CATEGORY As Global.System.Nullable(Of Integer), ByVal SIZE As Global.System.Nullable(Of Integer), ByVal COLOR As Global.System.Nullable(Of Integer), ByVal QUANTITY As Global.System.Nullable(Of Integer), ByVal Original_PROD_ID As Integer, ByVal Original_PROD_NAME As String, ByVal Original_CATEGORY As Global.System.Nullable(Of Integer), ByVal Original_SIZE As Global.System.Nullable(Of Integer), ByVal Original_COLOR As Global.System.Nullable(Of Integer), ByVal Original_QUANTITY As Global.System.Nullable(Of Integer), ByVal PROD_ID As Integer) As Integer
             If (PROD_NAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("PROD_NAME")
             Else
@@ -3463,34 +3525,46 @@ Namespace rstcDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_PROD_ID,Integer)
+            If (QUANTITY.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(QUANTITY.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_PROD_ID,Integer)
             If (Original_PROD_NAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_PROD_NAME")
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_PROD_NAME,String)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_PROD_NAME,String)
             End If
             If (Original_CATEGORY.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_CATEGORY.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_CATEGORY.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
             If (Original_SIZE.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_SIZE.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_SIZE.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
             If (Original_COLOR.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_COLOR.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_COLOR.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(PROD_ID,Integer)
+            If (Original_QUANTITY.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_QUANTITY.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(15).Value = CType(PROD_ID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -3510,8 +3584,8 @@ Namespace rstcDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal PROD_NAME As String, ByVal CATEGORY As Global.System.Nullable(Of Integer), ByVal SIZE As Global.System.Nullable(Of Integer), ByVal COLOR As Global.System.Nullable(Of Integer), ByVal Original_PROD_ID As Integer, ByVal Original_PROD_NAME As String, ByVal Original_CATEGORY As Global.System.Nullable(Of Integer), ByVal Original_SIZE As Global.System.Nullable(Of Integer), ByVal Original_COLOR As Global.System.Nullable(Of Integer)) As Integer
-            Return Me.Update(PROD_NAME, CATEGORY, SIZE, COLOR, Original_PROD_ID, Original_PROD_NAME, Original_CATEGORY, Original_SIZE, Original_COLOR, Original_PROD_ID)
+        Public Overloads Overridable Function Update(ByVal PROD_NAME As String, ByVal CATEGORY As Global.System.Nullable(Of Integer), ByVal SIZE As Global.System.Nullable(Of Integer), ByVal COLOR As Global.System.Nullable(Of Integer), ByVal QUANTITY As Global.System.Nullable(Of Integer), ByVal Original_PROD_ID As Integer, ByVal Original_PROD_NAME As String, ByVal Original_CATEGORY As Global.System.Nullable(Of Integer), ByVal Original_SIZE As Global.System.Nullable(Of Integer), ByVal Original_COLOR As Global.System.Nullable(Of Integer), ByVal Original_QUANTITY As Global.System.Nullable(Of Integer)) As Integer
+            Return Me.Update(PROD_NAME, CATEGORY, SIZE, COLOR, QUANTITY, Original_PROD_ID, Original_PROD_NAME, Original_CATEGORY, Original_SIZE, Original_COLOR, Original_QUANTITY, Original_PROD_ID)
         End Function
     End Class
     
