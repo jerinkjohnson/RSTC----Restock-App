@@ -12,24 +12,32 @@ Public Class add_product
         'cmd = con.CreateCommand()
         'cmd.CommandType = CommandType.Text
         Dim cmd As New SqlCommand("INSERT INTO PRODUCT (PROD_NAME,CATEGORY,SIZE,COLOR) VALUES(@PROD_NAME,@CATEGORY,@SIZE,@COLOR)", con)
+
         cmd.Parameters.AddWithValue("@PROD_NAME", ProdName1.Text)
         cmd.Parameters.AddWithValue("@CATEGORY", ComboBox1.SelectedValue)
         cmd.Parameters.AddWithValue("@SIZE", ComboBox2.SelectedValue)
         cmd.Parameters.AddWithValue("@COLOR", ComboBox3.SelectedValue)
+        'Dim ProdName As String = ProdName1.Text
+
+
         'Error handling to be added
 
         If cmd.ExecuteNonQuery() = 1 Then
             MessageBox.Show("Product added")
+
             ProdName1.Clear()
+
         Else
             MessageBox.Show("Product not added")
         End If
-        con.Close()
+
+        'Dim cmd1 As New SqlCommand("INSERT INTO HISTORY (ORDER_HISTORY) VALUES (@ORDER_HISTORY)", con)
+        'cmd1.Parameters.AddWithValue("@ORDER_HISTORY", ProdName)
+        'cmd1.ExecuteNonQuery()
+        'con.Close()
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
 
-    End Sub
 
     Private Sub FillByToolStripButton_Click(sender As Object, e As EventArgs) Handles FillByToolStripButton.Click
         Try
@@ -48,5 +56,39 @@ Public Class add_product
         'TODO: This line of code loads data into the 'RstcDataSet.CATEGORY' table. You can move, or remove it, as needed.
         Me.CATEGORYTableAdapter.Fill(Me.RstcDataSet.CATEGORY)
 
+    End Sub
+
+    Private Sub OrderButton_Click(sender As Object, e As EventArgs) Handles OrderButton.Click
+        Dim con As New SqlConnection
+
+        con.ConnectionString = "Data Source=Grace;Initial Catalog=rstc;Persist Security Info=True;User ID=sa;Password=Devjerin@2023"
+        con.Open()
+        'cmd = con.CreateCommand()
+        'cmd.CommandType = CommandType.Text
+        Dim cmd As New SqlCommand("INSERT INTO PRODUCT (PROD_NAME,CATEGORY,SIZE,COLOR) VALUES(@PROD_NAME,@CATEGORY,@SIZE,@COLOR)", con)
+
+        cmd.Parameters.AddWithValue("@PROD_NAME", ProdName1.Text)
+        cmd.Parameters.AddWithValue("@CATEGORY", ComboBox1.SelectedValue)
+        cmd.Parameters.AddWithValue("@SIZE", ComboBox2.SelectedValue)
+        cmd.Parameters.AddWithValue("@COLOR", ComboBox3.SelectedValue)
+        Dim OrderInfo As String = TimeString & " : Ordered " & ProdName1.Text & " from the " & ComboBox1.Text & " section of size " & ComboBox2.Text & " and of color " & ComboBox3.Text & " "
+
+
+
+        'Error handling to be added
+
+        If cmd.ExecuteNonQuery() = 1 Then
+            MessageBox.Show("Product added")
+
+            ProdName1.Clear()
+
+        Else
+            MessageBox.Show("Product not added")
+        End If
+
+        Dim cmd1 As New SqlCommand("INSERT INTO HISTORY (ORDER_HISTORY) VALUES (@ORDER_HISTORY)", con)
+        cmd1.Parameters.AddWithValue("@ORDER_HISTORY", OrderInfo)
+        cmd1.ExecuteNonQuery()
+        con.Close()
     End Sub
 End Class

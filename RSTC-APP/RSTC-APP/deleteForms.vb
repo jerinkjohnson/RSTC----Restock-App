@@ -16,13 +16,13 @@ Public Class deleteForms
             con.Open()
             cmd = con.CreateCommand()
             cmd.CommandType = CommandType.Text
-            'Dim csel As Integer = ComboBox1.SelectedValue
             cmd.CommandText = "DELETE FROM PRODUCT WHERE PROD_ID = " & ComboBox1.SelectedValue
 
         Else
             Me.Close()
         End If
         If cmd.ExecuteNonQuery() = 1 Then
+
             MsgBox("Successfully Deleted")
         End If
     End Sub

@@ -119,6 +119,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="OrderHistoryForm.Designer.vb">
+      <DependentUpon>OrderHistoryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OrderHistoryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderMsgBox.Designer.vb">
+      <DependentUpon>OrderMsgBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OrderMsgBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="rstcDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -147,12 +159,6 @@
     <Compile Include="tshirtForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateProductForm.Designer.vb">
-      <DependentUpon>UpdateProductForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UpdateProductForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="add-product.resx">
@@ -176,6 +182,12 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="OrderHistoryForm.resx">
+      <DependentUpon>OrderHistoryForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderMsgBox.resx">
+      <DependentUpon>OrderMsgBox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="sweat-stock.resx">
       <DependentUpon>sweat-stock.vb</DependentUpon>
     </EmbeddedResource>
@@ -184,9 +196,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tshirtForm.resx">
       <DependentUpon>tshirtForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UpdateProductForm.resx">
-      <DependentUpon>UpdateProductForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -228,6 +237,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Isolated_blue_t-shirt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RSTC BG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RSTC BG1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RSTC BG2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RSTC BG3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RSTC BG4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RSTC BGOG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vecteezy_cute-cat-best-designs-typography-design-t-shirts_17861575_688.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vecteezy_stay-wild-text-illustration-for-t-shirt-design_8506485_479.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vecteezy_watercolor-deer-t-shirt-logo-transparent-background_13994244_566.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ovctohighq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg %283%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

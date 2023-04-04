@@ -24,6 +24,8 @@ Partial Class add_product
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.CATEGORYBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RstcDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RstcDataSet = New RSTC_APP.rstcDataSet()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -32,44 +34,43 @@ Partial Class add_product
         Me.AddProButton = New System.Windows.Forms.Button()
         Me.Test1DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.CATEGORYBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CATEGORYBindingSource5 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.SIZEBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SIZEBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.COLORBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RstcDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RstcDataSet1 = New RSTC_APP.rstcDataSet()
+        Me.COLORBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.CATEGORYBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.CATEGORYBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Me.CATEGORYBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.FillByToolStrip = New System.Windows.Forms.ToolStrip()
         Me.FillByToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.CATEGORYBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RstcDataSet = New RSTC_APP.rstcDataSet()
-        Me.RstcDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CATEGORYTableAdapter = New RSTC_APP.rstcDataSetTableAdapters.CATEGORYTableAdapter()
-        Me.CATEGORYBindingSource5 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RstcDataSet1 = New RSTC_APP.rstcDataSet()
-        Me.RstcDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SIZEBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SIZETableAdapter = New RSTC_APP.rstcDataSetTableAdapters.SIZETableAdapter()
-        Me.COLORBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.COLORTableAdapter = New RSTC_APP.rstcDataSetTableAdapters.COLORTableAdapter()
-        Me.SIZEBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.COLORBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.COLORBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.OrderButton = New System.Windows.Forms.Button()
         CType(Me.CATEGORYBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RstcDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RstcDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Test1DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CATEGORYBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CATEGORYBindingSource5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SIZEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SIZEBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.COLORBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RstcDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RstcDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.COLORBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CATEGORYBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CATEGORYBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CATEGORYBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FillByToolStrip.SuspendLayout()
-        CType(Me.CATEGORYBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RstcDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RstcDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CATEGORYBindingSource5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RstcDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RstcDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SIZEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.COLORBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SIZEBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.COLORBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.COLORBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CATEGORYBindingSource1
@@ -77,45 +78,64 @@ Partial Class add_product
         Me.CATEGORYBindingSource1.DataMember = "CATEGORY"
         Me.CATEGORYBindingSource1.DataSource = Me.RstcDataSetBindingSource
         '
+        'RstcDataSetBindingSource
+        '
+        Me.RstcDataSetBindingSource.DataSource = Me.RstcDataSet
+        Me.RstcDataSetBindingSource.Position = 0
+        '
+        'RstcDataSet
+        '
+        Me.RstcDataSet.DataSetName = "rstcDataSet"
+        Me.RstcDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(169, 151)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(122, 17)
+        Me.Label1.Size = New System.Drawing.Size(157, 16)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Product Category:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(169, 217)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 17)
+        Me.Label2.Size = New System.Drawing.Size(108, 16)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Product Size"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(169, 284)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(102, 17)
+        Me.Label3.Size = New System.Drawing.Size(136, 16)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Product Colour"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(169, 87)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(98, 17)
+        Me.Label4.Size = New System.Drawing.Size(120, 16)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Product Name"
         '
         'ProdName1
         '
         Me.ProdName1.Location = New System.Drawing.Point(349, 84)
+        Me.ProdName1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ProdName1.Name = "ProdName1"
         Me.ProdName1.Size = New System.Drawing.Size(172, 22)
         Me.ProdName1.TabIndex = 7
@@ -123,7 +143,8 @@ Partial Class add_product
         'AddProButton
         '
         Me.AddProButton.Font = New System.Drawing.Font("Bolgart Display", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddProButton.Location = New System.Drawing.Point(285, 360)
+        Me.AddProButton.Location = New System.Drawing.Point(282, 352)
+        Me.AddProButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.AddProButton.Name = "AddProButton"
         Me.AddProButton.Size = New System.Drawing.Size(163, 50)
         Me.AddProButton.TabIndex = 11
@@ -137,10 +158,21 @@ Partial Class add_product
         Me.ComboBox1.DisplayMember = "CATEGORY_NAME"
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(349, 142)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(172, 24)
         Me.ComboBox1.TabIndex = 12
         Me.ComboBox1.ValueMember = "CATEGORY_ID"
+        '
+        'CATEGORYBindingSource
+        '
+        Me.CATEGORYBindingSource.DataMember = "CATEGORY"
+        Me.CATEGORYBindingSource.DataSource = Me.RstcDataSet
+        '
+        'CATEGORYBindingSource5
+        '
+        Me.CATEGORYBindingSource5.DataMember = "CATEGORY"
+        Me.CATEGORYBindingSource5.DataSource = Me.RstcDataSetBindingSource
         '
         'ComboBox2
         '
@@ -149,10 +181,21 @@ Partial Class add_product
         Me.ComboBox2.DisplayMember = "SIZE_NAME"
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(349, 210)
+        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(172, 24)
         Me.ComboBox2.TabIndex = 13
         Me.ComboBox2.ValueMember = "SIZE_NO"
+        '
+        'SIZEBindingSource
+        '
+        Me.SIZEBindingSource.DataMember = "SIZE"
+        Me.SIZEBindingSource.DataSource = Me.RstcDataSetBindingSource
+        '
+        'SIZEBindingSource1
+        '
+        Me.SIZEBindingSource1.DataMember = "SIZE"
+        Me.SIZEBindingSource1.DataSource = Me.RstcDataSetBindingSource
         '
         'ComboBox3
         '
@@ -161,10 +204,31 @@ Partial Class add_product
         Me.ComboBox3.DisplayMember = "COLOR_NAME"
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Location = New System.Drawing.Point(349, 281)
+        Me.ComboBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(172, 24)
         Me.ComboBox3.TabIndex = 14
         Me.ComboBox3.ValueMember = "COLOR_CODE"
+        '
+        'COLORBindingSource
+        '
+        Me.COLORBindingSource.DataMember = "COLOR"
+        Me.COLORBindingSource.DataSource = Me.RstcDataSet1BindingSource
+        '
+        'RstcDataSet1BindingSource
+        '
+        Me.RstcDataSet1BindingSource.DataSource = Me.RstcDataSet1
+        Me.RstcDataSet1BindingSource.Position = 0
+        '
+        'RstcDataSet1
+        '
+        Me.RstcDataSet1.DataSetName = "rstcDataSet"
+        Me.RstcDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'COLORBindingSource2
+        '
+        Me.COLORBindingSource2.DataMember = "COLOR"
+        Me.COLORBindingSource2.DataSource = Me.RstcDataSet1BindingSource
         '
         'CATEGORYBindingSource2
         '
@@ -187,7 +251,7 @@ Partial Class add_product
         Me.FillByToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FillByToolStripButton})
         Me.FillByToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.FillByToolStrip.Name = "FillByToolStrip"
-        Me.FillByToolStrip.Size = New System.Drawing.Size(800, 27)
+        Me.FillByToolStrip.Size = New System.Drawing.Size(800, 31)
         Me.FillByToolStrip.TabIndex = 15
         Me.FillByToolStrip.Text = "FillByToolStrip"
         '
@@ -195,81 +259,44 @@ Partial Class add_product
         '
         Me.FillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.FillByToolStripButton.Name = "FillByToolStripButton"
-        Me.FillByToolStripButton.Size = New System.Drawing.Size(48, 24)
+        Me.FillByToolStripButton.Size = New System.Drawing.Size(48, 28)
         Me.FillByToolStripButton.Text = "FillBy"
-        '
-        'CATEGORYBindingSource
-        '
-        Me.CATEGORYBindingSource.DataMember = "CATEGORY"
-        Me.CATEGORYBindingSource.DataSource = Me.RstcDataSet
-        '
-        'RstcDataSet
-        '
-        Me.RstcDataSet.DataSetName = "rstcDataSet"
-        Me.RstcDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'RstcDataSetBindingSource
-        '
-        Me.RstcDataSetBindingSource.DataSource = Me.RstcDataSet
-        Me.RstcDataSetBindingSource.Position = 0
         '
         'CATEGORYTableAdapter
         '
         Me.CATEGORYTableAdapter.ClearBeforeFill = True
         '
-        'CATEGORYBindingSource5
-        '
-        Me.CATEGORYBindingSource5.DataMember = "CATEGORY"
-        Me.CATEGORYBindingSource5.DataSource = Me.RstcDataSetBindingSource
-        '
-        'RstcDataSet1
-        '
-        Me.RstcDataSet1.DataSetName = "rstcDataSet"
-        Me.RstcDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'RstcDataSet1BindingSource
-        '
-        Me.RstcDataSet1BindingSource.DataSource = Me.RstcDataSet1
-        Me.RstcDataSet1BindingSource.Position = 0
-        '
-        'SIZEBindingSource
-        '
-        Me.SIZEBindingSource.DataMember = "SIZE"
-        Me.SIZEBindingSource.DataSource = Me.RstcDataSetBindingSource
-        '
         'SIZETableAdapter
         '
         Me.SIZETableAdapter.ClearBeforeFill = True
         '
-        'COLORBindingSource
-        '
-        Me.COLORBindingSource.DataMember = "COLOR"
-        Me.COLORBindingSource.DataSource = Me.RstcDataSet1BindingSource
-        '
         'COLORTableAdapter
         '
         Me.COLORTableAdapter.ClearBeforeFill = True
-        '
-        'SIZEBindingSource1
-        '
-        Me.SIZEBindingSource1.DataMember = "SIZE"
-        Me.SIZEBindingSource1.DataSource = Me.RstcDataSetBindingSource
         '
         'COLORBindingSource1
         '
         Me.COLORBindingSource1.DataMember = "COLOR"
         Me.COLORBindingSource1.DataSource = Me.RstcDataSetBindingSource
         '
-        'COLORBindingSource2
+        'OrderButton
         '
-        Me.COLORBindingSource2.DataMember = "COLOR"
-        Me.COLORBindingSource2.DataSource = Me.RstcDataSet1BindingSource
+        Me.OrderButton.Font = New System.Drawing.Font("Bolgart Display", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OrderButton.Location = New System.Drawing.Point(282, 352)
+        Me.OrderButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.OrderButton.Name = "OrderButton"
+        Me.OrderButton.Size = New System.Drawing.Size(163, 50)
+        Me.OrderButton.TabIndex = 16
+        Me.OrderButton.Text = "Order Product"
+        Me.OrderButton.UseVisualStyleBackColor = True
         '
         'add_product
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.RSTC_APP.My.Resources.Resources.RSTC_BG2
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.OrderButton)
         Me.Controls.Add(Me.FillByToolStrip)
         Me.Controls.Add(Me.ComboBox3)
         Me.Controls.Add(Me.ComboBox2)
@@ -280,26 +307,27 @@ Partial Class add_product
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "add_product"
         Me.Text = "add_product"
         CType(Me.CATEGORYBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RstcDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RstcDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Test1DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CATEGORYBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CATEGORYBindingSource5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SIZEBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SIZEBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.COLORBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RstcDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RstcDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.COLORBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CATEGORYBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CATEGORYBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CATEGORYBindingSource4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FillByToolStrip.ResumeLayout(False)
         Me.FillByToolStrip.PerformLayout()
-        CType(Me.CATEGORYBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RstcDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RstcDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CATEGORYBindingSource5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RstcDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RstcDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SIZEBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.COLORBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SIZEBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.COLORBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.COLORBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -334,4 +362,5 @@ Partial Class add_product
     Friend WithEvents SIZEBindingSource1 As BindingSource
     Friend WithEvents COLORBindingSource1 As BindingSource
     Friend WithEvents COLORBindingSource2 As BindingSource
+    Friend WithEvents OrderButton As Button
 End Class

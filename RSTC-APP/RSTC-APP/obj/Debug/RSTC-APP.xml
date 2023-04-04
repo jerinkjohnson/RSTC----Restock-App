@@ -22,12 +22,87 @@ RSTC-APP
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:RSTC_APP.My.Resources.Resources.alarm">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:RSTC_APP.My.Resources.Resources.brush_stroke_ong">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:RSTC_APP.My.Resources.Resources.Isolated_blue_t_shirt">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.ovctohighq">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.pngegg">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.pngegg__1_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.pngegg__2_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.pngegg__3_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.RSTC_BG">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.RSTC_BG1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.RSTC_BG2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.RSTC_BG3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.RSTC_BG4">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.RSTC_BGOG">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.vecteezy_cute_cat_best_designs_typography_design_t_shirts_17861575_688">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.vecteezy_stay_wild_text_illustration_for_t_shirt_design_8506485_479">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSTC_APP.My.Resources.Resources.vecteezy_watercolor_deer_t_shirt_logo_transparent_background_13994244_566">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -57,6 +132,11 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:RSTC_APP.rstcDataSet.HISTORYDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:RSTC_APP.rstcDataSet.CATEGORYRow">
 <summary>
 Represents strongly named DataRow class.
@@ -73,6 +153,11 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:RSTC_APP.rstcDataSet.SIZERow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSet.HISTORYRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -97,6 +182,11 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:RSTC_APP.rstcDataSet.HISTORYRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:RSTC_APP.rstcDataSetTableAdapters.CATEGORYTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -113,6 +203,11 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:RSTC_APP.rstcDataSetTableAdapters.SIZETableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RSTC_APP.rstcDataSetTableAdapters.HISTORYTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
