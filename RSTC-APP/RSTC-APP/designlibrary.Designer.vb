@@ -156,6 +156,8 @@ Partial Class designlibrary
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
+        Me.DoubleBuffered = True
+        Me.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Name = "designlibrary"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "designlibrary"

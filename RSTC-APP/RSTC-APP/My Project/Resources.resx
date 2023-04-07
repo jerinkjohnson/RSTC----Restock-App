@@ -130,8 +130,8 @@
   <data name="RSTC BG2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RSTC BG2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-create-order-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-create-order-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tote-bag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tote-bag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="vecteezy_watercolor-deer-t-shirt-logo-transparent-background_13994244_566" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vecteezy_watercolor-deer-t-shirt-logo-transparent-background_13994244_566.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,6 +145,9 @@
   <data name="pngegg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngegg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="vecteezy_cute-cat-best-designs-typography-design-t-shirts_17861575_688" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vecteezy_cute-cat-best-designs-typography-design-t-shirts_17861575_688.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -153,6 +156,9 @@
   </data>
   <data name="hoodie" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hoodie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RSTC BGOG-min (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RSTC BGOG-min (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pngegg (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngegg (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,11 +172,17 @@
   <data name="icons8-online-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-online-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RSTC BGOG-min" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RSTC BGOG-min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="RSTC BG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RSTC BG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-offline-26" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-offline-26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RSTC-BGOG-min-_1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RSTC-BGOG-min-_1_.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-update-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-update-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,8 +211,8 @@
   <data name="icons8-delete-document-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-delete-document-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-create-order-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-create-order-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-create-order-481" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-create-order-481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,7 +235,7 @@
   <data name="icons8-create-order-48 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-create-order-48 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tote-bag" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tote-bag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RSTC-BGOG-min-_1__1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RSTC-BGOG-min-_1__1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

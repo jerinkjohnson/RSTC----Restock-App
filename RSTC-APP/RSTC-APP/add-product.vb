@@ -5,6 +5,7 @@ Public Class add_product
 
 
     Private Sub AddProButton_Click(sender As Object, e As EventArgs) Handles AddProButton.Click
+        ComboBox1.Hide()
         Dim con As New SqlConnection
 
         con.ConnectionString = "Data Source=Grace;Initial Catalog=rstc;Persist Security Info=True;User ID=sa;Password=Devjerin@2023"
@@ -27,7 +28,7 @@ Public Class add_product
             MessageBox.Show("Product added")
 
             ProdName1.Clear()
-
+            TextBox1.Clear()
         Else
             MessageBox.Show("Product not added")
         End If
@@ -64,6 +65,8 @@ Public Class add_product
     End Sub
 
     Private Sub OrderButton_Click(sender As Object, e As EventArgs) Handles OrderButton.Click
+        ProdName1.Hide()
+
         Dim con As New SqlConnection
 
         con.ConnectionString = "Data Source=Grace;Initial Catalog=rstc;Persist Security Info=True;User ID=sa;Password=Devjerin@2023"
@@ -95,5 +98,6 @@ Public Class add_product
         cmd1.ExecuteNonQuery()
         con.Close()
     End Sub
+
 
 End Class

@@ -113,12 +113,6 @@
     <Compile Include="designlibrary.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontPageForm.Designer.vb">
-      <DependentUpon>FrontPageForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrontPageForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Hoodie-stock.Designer.vb">
       <DependentUpon>Hoodie-stock.vb</DependentUpon>
     </Compile>
@@ -170,6 +164,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>rstcDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Splash.Designer.vb">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="sweat-stock.Designer.vb">
       <DependentUpon>sweat-stock.vb</DependentUpon>
     </Compile>
@@ -199,9 +199,6 @@
     <EmbeddedResource Include="designlibrary.resx">
       <DependentUpon>designlibrary.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontPageForm.resx">
-      <DependentUpon>FrontPageForm.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Hoodie-stock.resx">
       <DependentUpon>Hoodie-stock.vb</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OrderMsgBox.resx">
       <DependentUpon>OrderMsgBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sweat-stock.resx">
       <DependentUpon>sweat-stock.vb</DependentUpon>
@@ -344,6 +344,10 @@
     <None Include="Resources\sweater.png" />
     <None Include="Resources\hoodie.png" />
     <None Include="Resources\tote-bag.png" />
+    <None Include="Resources\RSTC BGOG-min.png" />
+    <None Include="Resources\RSTC BGOG-min %281%29.png" />
+    <None Include="Resources\RSTC-BGOG-min-_1_.jpeg" />
+    <None Include="Resources\RSTC-BGOG-min-_1__1.jpeg" />
     <Content Include="tree.ico" />
   </ItemGroup>
   <ItemGroup>

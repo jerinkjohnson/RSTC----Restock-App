@@ -44,4 +44,4 @@ E:\Git Collab\RSTC---Restock-App\RSTC-APP\RSTC-APP\obj\Debug\RSTC_APP.tshirtForm
 E:\Git Collab\RSTC---Restock-App\RSTC-APP\RSTC-APP\obj\Debug\RSTC_APP.deleteForms.resources
 E:\Git Collab\RSTC---Restock-App\RSTC-APP\RSTC-APP\obj\Debug\RSTC_APP.OrderMsgBoxForm.resources
 E:\Git Collab\RSTC---Restock-App\RSTC-APP\RSTC-APP\obj\Debug\RSTC_APP.OrderHistoryForm.resources
-E:\Git Collab\RSTC---Restock-App\RSTC-APP\RSTC-APP\obj\Debug\RSTC_APP.FrontPageForm.resources
+E:\Git Collab\RSTC---Restock-App\RSTC-APP\RSTC-APP\obj\Debug\RSTC_APP.Splash.resources

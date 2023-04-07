@@ -30,6 +30,8 @@ Partial Class deleteForms
         Me.RstcDataSet = New RSTC_APP.rstcDataSet()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PRODUCTTableAdapter = New RSTC_APP.rstcDataSetTableAdapters.PRODUCTTableAdapter()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.PRODUCTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RstcDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RstcDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,15 +89,41 @@ Partial Class deleteForms
         '
         Me.PRODUCTTableAdapter.ClearBeforeFill = True
         '
+        'ComboBox2
+        '
+        Me.ComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.PRODUCTBindingSource, "PROD_ID", True))
+        Me.ComboBox2.DataSource = Me.PRODUCTBindingSource
+        Me.ComboBox2.DisplayMember = "PROD_NAME"
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(235, 140)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(220, 24)
+        Me.ComboBox2.TabIndex = 4
+        Me.ComboBox2.ValueMember = "PROD_ID"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Montserrat Subrayada", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(105, 146)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(80, 18)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Product"
+        '
         'deleteForms
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.RSTC_APP.My.Resources.Resources.RSTC_BG2
         Me.ClientSize = New System.Drawing.Size(552, 334)
+        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label1)
+        Me.DoubleBuffered = True
         Me.Name = "deleteForms"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "deleteForms"
@@ -114,4 +142,6 @@ Partial Class deleteForms
     Friend WithEvents Button1 As Button
     Friend WithEvents PRODUCTBindingSource As BindingSource
     Friend WithEvents PRODUCTTableAdapter As rstcDataSetTableAdapters.PRODUCTTableAdapter
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Label2 As Label
 End Class

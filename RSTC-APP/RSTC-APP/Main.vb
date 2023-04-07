@@ -32,6 +32,7 @@ Public Class Main
 
     Private Sub HoodiesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HoodiesToolStripMenuItem.Click
         Dim addProducts As New add_product
+
         addProducts.OrderButton.Hide()
         addProducts.Show()
     End Sub
@@ -88,7 +89,6 @@ Public Class Main
         ToteC = count4
         Label15.Text = ToteC
         cmd.ExecuteNonQuery()
-
         con.Close()
     End Sub
 
@@ -161,6 +161,7 @@ Public Class Main
     End Sub
 
     Private Sub PlaceOrderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PlaceOrderToolStripMenuItem.Click
+
         add_product.Show()
         add_product.AddProButton.Hide()
     End Sub
@@ -187,29 +188,33 @@ Public Class Main
         Application.Restart()
     End Sub
 
-    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-
-        Timer2.Start()
-        Dim con As New SqlConnection
-        Dim cmd As New SqlCommand
-        con.ConnectionString = "Data Source=Grace;Initial Catalog=rstc;Persist Security Info=True;User ID=sa;Password=Devjerin@2023"
-        con.Open()
-        cmd = con.CreateCommand()
-        cmd.CommandType = CommandType.Text
-        cmd.CommandText = "UPDATE PRODUCT SET QUANTITY = QUANTITY - 1 WHERE QUANTITY > 0;"
-        cmd.ExecuteNonQuery()
-        'For testing sales
-        'MsgBox("SALES ONLINE")
-        con.Close()
-    End Sub
 
     Private Sub OfflineToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OfflineToolStripMenuItem.Click
         Timer2.Stop()
     End Sub
 
     Private Sub OnlineToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OnlineToolStripMenuItem.Click
+
         Timer2.Start()
+
     End Sub
+
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        Dim con As New SqlConnection
+        Dim cmd As New SqlCommand
+        con.ConnectionString = "Data Source=Grace;Initial Catalog=rstc;Persist Security Info=True;User ID=sa;Password=Devjerin@2023"
+        con.Open()
+        cmd = con.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "UPDATE PRODUCT SET QUANTITY = QUANTITY - 1 WHERE QUANTITY >= 0;"
+        cmd.ExecuteNonQuery()
+
+        'For testing sales
+        'MsgBox("SALES ONLINE")
+        con.Close()
+    End Sub
+
+
 End Class
 
 

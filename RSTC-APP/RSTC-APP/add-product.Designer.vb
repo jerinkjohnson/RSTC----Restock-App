@@ -362,6 +362,7 @@ Partial Class add_product
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.DoubleBuffered = True
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "add_product"
         Me.Text = "add_product"
